@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seasoned Cybersecurity Pro Hub — Curated news feeds, expert sources, podcasts, X accounts, Reddit communities, and essential resources for serious practitioners.">
+  <title>CyberPro Hub | Seasoned Practitioner Resources</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+  <div class="grid-bg"></div>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">CyberPro<span class="accent">Hub</span></span>
+      </a>
+      <nav class="main-nav">
+        <a href="#news">News</a>
+        <a href="#feeds">Feeds</a>
+        <a href="#experts">Experts</a>
+        <a href="#podcasts">Podcasts</a>
+        <a href="#xaccounts">X / Twitter</a>
+        <a href="#reddit">Reddit</a>
+        <a href="#tools">Tools</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">Seasoned Practitioner Resource</div>
+        <h1>Stay sharp.<br><span class="gradient-text">Cut through the noise.</span></h1>
+        <p class="hero-sub">Curated cybersecurity intelligence sources, expert voices, podcasts, communities, and tools trusted by professionals who actually defend networks for a living.</p>
+        <div class="hero-actions">
+          <a href="#news" class="btn btn-primary">Explore Resources</a>
+          <a href="#feeds" class="btn btn-secondary">RSS & Feeds</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">40+</span>
+            <span class="stat-label">Curated Sources</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">25+</span>
+            <span class="stat-label">Expert Voices</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Top Podcasts</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Sources -->
+    <section id="news" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01 — News & Analysis</span>
+          <h2>Renowned News Sources</h2>
+          <p>High-signal outlets that serious practitioners actually read. Skip the vendor fluff.</p>
+        </div>
+        <div class="card-grid">
+          <a href="https://krebsonsecurity.com/" target="_blank" rel="noopener" class="card featured">
+            <div class="card-top">
+              <span class="card-icon">🔍</span>
+              <span class="badge">Must Read</span>
+            </div>
+            <h3>Krebs on Security</h3>
+            <p>Brian Krebs — the gold standard for investigative cybercrime journalism. Deep dives into breaches, ransomware ecosystems, and underground forums.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://thehackernews.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">📰</span>
+            </div>
+            <h3>The Hacker News</h3>
+            <p>Fast, widely-read daily coverage of threats, zero-days, malware, and major incidents. High volume, solid technical detail.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.bleepingcomputer.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">💻</span>
+            </div>
+            <h3>BleepingComputer</h3>
+            <p>Excellent incident reports, ransomware tracking, malware analysis, and practical remediation guidance.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.darkreading.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">🌑</span>
+            </div>
+            <h3>Dark Reading</h3>
+            <p>Enterprise-focused security news, threat research, and analysis trusted by professionals.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://therecord.media/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">📡</span>
+            </div>
+            <h3>The Record</h3>
+            <p>Recorded Future’s news arm. Frequently first on breaking threat and policy stories.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.securityweek.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">📅</span>
+            </div>
+            <h3>SecurityWeek</h3>
+            <p>Industry and enterprise security news, threat actor activity, and ICS/OT coverage.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://cyberscoop.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">🏛️</span>
+            </div>
+            <h3>CyberScoop</h3>
+            <p>Strong on government, policy, and federal cybersecurity developments.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.schneier.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">🧠</span>
+            </div>
+            <h3>Schneier on Security</h3>
+            <p>Bruce Schneier — strategic thinking, cryptography, privacy, and security policy.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feeds & Newsletters -->
+    <section id="feeds" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02 — Feeds & Newsletters</span>
+          <h2>Threat Intel Feeds & Daily Briefs</h2>
+          <p>RSS-ready sources and high-value newsletters that deliver signal over noise.</p>
+        </div>
+        <div class="two-col">
+          <div>
+            <h3 class="subsection-title">Essential Feeds & Aggregators</h3>
+            <ul class="link-list">
+              <li>
+                <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">
+                  <strong>CISA KEV Catalog</strong>
+                  <span>Authoritative known-exploited vulnerabilities. Non-negotiable for prioritization.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/" target="_blank" rel="noopener">
+                  <strong>NVD (NIST)</strong>
+                  <span>National Vulnerability Database — the technical record.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://attack.mitre.org/" target="_blank" rel="noopener">
+                  <strong>MITRE ATT&CK</strong>
+                  <span>Adversary tactics, techniques, and procedures knowledge base.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://otx.alienvault.com/" target="_blank" rel="noopener">
+                  <strong>AlienVault OTX</strong>
+                  <span>Open Threat Exchange — community threat intelligence.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://unit42.paloaltonetworks.com/" target="_blank" rel="noopener">
+                  <strong>Unit 42 (Palo Alto)</strong>
+                  <span>High-quality campaign and malware research.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://blog.talosintelligence.com/" target="_blank" rel="noopener">
+                  <strong>Cisco Talos</strong>
+                  <span>Threat research, vulnerability disclosures, and IOCs.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.microsoft.com/en-us/security/blog/" target="_blank" rel="noopener">
+                  <strong>Microsoft Security Blog / MSRC</strong>
+                  <span>First-party research and response center updates.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://cloud.google.com/blog/topics/threat-intelligence" target="_blank" rel="noopener">
+                  <strong>Google Cloud Threat Intelligence (Mandiant)</strong>
+                  <span>APT and campaign analysis from Mandiant researchers.</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="subsection-title">Top Newsletters</h3>
+            <ul class="link-list">
+              <li>
+                <a href="https://risky.biz/" target="_blank" rel="noopener">
+                  <strong>Risky Business / Risky Bulletin</strong>
+                  <span>Patrick Gray — opinionated, practitioner-focused roundups. Essential.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://tldrsec.com/" target="_blank" rel="noopener">
+                  <strong>tl;dr sec</strong>
+                  <span>Clint Gibler — weekly AppSec & cloud security curation. Excellent signal.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://tldr.tech/infosec" target="_blank" rel="noopener">
+                  <strong>TLDR InfoSec</strong>
+                  <span>Daily five-minute habit. Clean and efficient.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.sans.org/newsletters/newsbites/" target="_blank" rel="noopener">
+                  <strong>SANS NewsBites</strong>
+                  <span>Semiweekly executive-friendly headlines.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://danielmiessler.com/newsletter/" target="_blank" rel="noopener">
+                  <strong>Unsupervised Learning</strong>
+                  <span>Daniel Miessler — cybersecurity + AI + strategy intersections.</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank" rel="noopener">
+                  <strong>CISA Alerts & Advisories</strong>
+                  <span>Official U.S. government cybersecurity alerts.</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experts -->
+    <section id="experts" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03 — Voices Worth Following</span>
+          <h2>Seasoned Experts & Researchers</h2>
+          <p>People who consistently produce high-value insight, research, or analysis.</p>
+        </div>
+        <div class="card-grid experts-grid">
+          <div class="card expert-card">
+            <div class="expert-avatar">BK</div>
+            <h3>Brian Krebs</h3>
+            <p class="expert-role">Investigative Journalist</p>
+            <p>Deep cybercrime investigations. KrebsOnSecurity is required reading.</p>
+            <div class="expert-links">
+              <a href="https://krebsonsecurity.com/" target="_blank" rel="noopener">Blog</a>
+              <a href="https://x.com/briankrebs" target="_blank" rel="noopener">@briankrebs</a>
+            </div>
+          </div>
+          <div class="card expert-card">
+            <div class="expert-avatar">TH</div>
+            <h3>Troy Hunt</h3>
+            <p class="expert-role">Have I Been Pwned</p>
+            <p>Breach transparency, web security education, and practical advice.</p>
+            <div class="expert-links">
+              <a href="https://www.troyhunt.com/" target="_blank" rel="noopener">Blog</a>
+              <a href="https://x.com/troyhunt" target="_blank" rel="noopener">@troyhunt</a>
+            </div>
+          </div>
+          <div class="card expert-card">
+            <div class="expert-avatar">BS</div>
+            <h3>Bruce Schneier</h3>
+            <p class="expert-role">Cryptographer & Author</p>
+            <p>Security thinking, privacy, policy, and long-term strategic perspective.</p>
+            <div class="expert-links">
+              <a href="https://www.schneier.com/" target="_blank" rel="noopener">Blog</a>
+              <a href="https://x.com/schneierblog" target="_blank" rel="noopener">@schneierblog</a>
+            </div>
+          </div>
+          <div class="card expert-card">
+            <div class="expert-avatar">GC</div>
+            <h3>Graham Cluley</h3>
+            <p class="expert-role">Security Writer & Podcaster</p>
+            <p>Clear analysis, Smashing Security co-host, long-time industry voice.</p>
+            <div class="expert-links">
+              <a href="https://grahamcluley.com/" target="_blank" rel="noopener">Blog</a>
+              <a href="https://x.com/gcluley" target="_blank" rel="noopener">@gcluley</a>
+            </div>
+          </div>
+          <div class="card expert-card">
+            <div class="expert-avatar">MH</div>
+            <h3>Mikko Hyppönen</h3>
+            <p class="expert-role">Chief Research Officer, WithSecure</p>
+            <p>Malware research, surveillance, and global threat perspective.</p>
+            <div class="expert-links">
+              <a href="https://x.com/mikko" target="_blank" rel="noopener">@mikko</a>
+            </div>
+          </div>
+          <div class="card expert-card">
+            <div class="expert-avatar">KB</div>
+            <h3>Kevin Beaumont</h3>
+            <p class="expert-role">Threat Researcher</p>
+            <p>Sharp vulnerability and threat commentary. High signal.</p>
+            <div class="expert-links">
+              <a href="https://x.com/GossiTheDog" target="_blank" rel="noopener">@GossiTheDog</a>
+            </div>
+          </div>
+          <div class="card expert-card">
+            <div class="expert-avatar">RT</div>
+            <h3>Rachel Tobac</h3>
+            <p class="expert-role">Social Engineer & CEO</p>
+            <p>Social engineering, human risk, and practical security awareness.</p>
+            <div class="expert-links">
+              <a href="https://x.com/RachelTobac" target="_blank" rel="noopener">@RachelTobac</a>
+            </div>
+          </div>
+          <div class="card expert-card">
+            <div class="expert-avatar">DM</div>
+            <h3>Daniel Miessler</h3>
+            <p class="expert-role">Unsupervised Learning</p>
+            <p>Cybersecurity + AI + culture. Thoughtful long-form analysis.</p>
+            <div class="expert-links">
+              <a href="https://danielmiessler.com/" target="_blank" rel="noopener">Site</a>
+              <a href="https://x.com/DanielMiessler" target="_blank" rel="noopener">@DanielMiessler</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Podcasts -->
+    <section id="podcasts" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 — Podcasts</span>
+          <h2>Best Podcasts for Practitioners</h2>
+          <p>Available on Pocket Casts, Apple Podcasts, Spotify, and most major apps. These are the ones that consistently deliver value.</p>
+        </div>
+        <div class="card-grid podcast-grid">
+          <a href="https://darknetdiaries.com/" target="_blank" rel="noopener" class="card podcast-card featured">
+            <div class="card-top">
+              <span class="card-icon">🎙️</span>
+              <span class="badge">Top Pick</span>
+            </div>
+            <h3>Darknet Diaries</h3>
+            <p class="meta">Jack Rhysider · Bi-weekly</p>
+            <p>Narrative true stories from the dark side of the internet. Exceptional storytelling that also teaches.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://risky.biz/netcasts/risky-business/" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <span class="card-icon">📻</span>
+            </div>
+            <h3>Risky Business</h3>
+            <p class="meta">Patrick Gray · Weekly</p>
+            <p>The most-cited weekly briefing among working professionals. Sharp, no-nonsense industry analysis.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://thecyberwire.com/podcasts/daily-podcast" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <span class="card-icon">📅</span>
+            </div>
+            <h3>CyberWire Daily</h3>
+            <p class="meta">Daily · ~25 min</p>
+            <p>Fast, reliable weekday news and analysis. Ideal for staying current without drowning.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://twit.tv/shows/security-now" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <span class="card-icon">🔒</span>
+            </div>
+            <h3>Security Now</h3>
+            <p class="meta">Steve Gibson & Leo Laporte · Weekly</p>
+            <p>Deep technical discussions on vulnerabilities, protocols, and privacy. Long-running classic.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://www.smashingsecurity.com/" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <span class="card-icon">💥</span>
+            </div>
+            <h3>Smashing Security</h3>
+            <p class="meta">Graham Cluley & Carole Theriault</p>
+            <p>Witty, accessible take on serious security stories. Great balance of insight and personality.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://cisoseries.com/" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <span class="card-icon">👔</span>
+            </div>
+            <h3>CISO Series</h3>
+            <p class="meta">David Spark + guests</p>
+            <p>Leadership, board communication, risk, and the practical realities of running security programs.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://isc.sans.edu/podcast.html" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <span class="card-icon">⛈️</span>
+            </div>
+            <h3>ISC StormCast</h3>
+            <p class="meta">Johannes Ullrich · Daily short</p>
+            <p>Quick daily summary of network security events. Perfect for the commute or morning brief.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://podcasts.apple.com/us/podcast/the-defensive-security-podcast/id961167167" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <span class="card-icon">🛡️</span>
+            </div>
+            <h3>Defensive Security Podcast</h3>
+            <p class="meta">Weekly</p>
+            <p>Reviews high-profile breaches and extracts practical lessons for defenders.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+        </div>
+        <p class="pocket-note">💡 <strong>Pocket Casts tip:</strong> Search any of these titles directly in Pocket Casts. Most have official feeds. You can also import OPML collections of security RSS feeds from community repositories for a complete threat-intel listening + reading stack.</p>
+      </div>
+    </section>
+
+    <!-- X Accounts -->
+    <section id="xaccounts" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">05 — X (Twitter)</span>
+          <h2>Best X Accounts to Follow</h2>
+          <p>High-signal accounts that post research, threat intel, vulnerability analysis, and useful commentary — not just engagement bait.</p>
+        </div>
+        <div class="account-grid">
+          <a href="https://x.com/briankrebs" target="_blank" rel="noopener" class="account-chip">@briankrebs</a>
+          <a href="https://x.com/troyhunt" target="_blank" rel="noopener" class="account-chip">@troyhunt</a>
+          <a href="https://x.com/GossiTheDog" target="_blank" rel="noopener" class="account-chip">@GossiTheDog</a>
+          <a href="https://x.com/mikko" target="_blank" rel="noopener" class="account-chip">@mikko</a>
+          <a href="https://x.com/gcluley" target="_blank" rel="noopener" class="account-chip">@gcluley</a>
+          <a href="https://x.com/schneierblog" target="_blank" rel="noopener" class="account-chip">@schneierblog</a>
+          <a href="https://x.com/SwiftOnSecurity" target="_blank" rel="noopener" class="account-chip">@SwiftOnSecurity</a>
+          <a href="https://x.com/RachelTobac" target="_blank" rel="noopener" class="account-chip">@RachelTobac</a>
+          <a href="https://x.com/DanielMiessler" target="_blank" rel="noopener" class="account-chip">@DanielMiessler</a>
+          <a href="https://x.com/cyb3rops" target="_blank" rel="noopener" class="account-chip">@cyb3rops</a>
+          <a href="https://x.com/malwaretechblog" target="_blank" rel="noopener" class="account-chip">@malwaretechblog</a>
+          <a href="https://x.com/hasherezade" target="_blank" rel="noopener" class="account-chip">@hasherezade</a>
+          <a href="https://x.com/taviso" target="_blank" rel="noopener" class="account-chip">@taviso</a>
+          <a href="https://x.com/maddiestone" target="_blank" rel="noopener" class="account-chip">@maddiestone</a>
+          <a href="https://x.com/MalwareJake" target="_blank" rel="noopener" class="account-chip">@MalwareJake</a>
+          <a href="https://x.com/RobertMLee" target="_blank" rel="noopener" class="account-chip">@RobertMLee</a>
+          <a href="https://x.com/chrisinsec" target="_blank" rel="noopener" class="account-chip">@chrisinsec</a>
+          <a href="https://x.com/securityweekly" target="_blank" rel="noopener" class="account-chip">@securityweekly</a>
+          <a href="https://x.com/ChuckDBrooks" target="_blank" rel="noopener" class="account-chip">@ChuckDBrooks</a>
+          <a href="https://x.com/a_greenberg" target="_blank" rel="noopener" class="account-chip">@a_greenberg</a>
+        </div>
+        <p class="note">Also consider curated lists such as Florian Roth’s (@cyb3rops) high-signal Cyber list for a ready-made timeline of quality accounts.</p>
+      </div>
+    </section>
+
+    <!-- Reddit -->
+    <section id="reddit" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">06 — Reddit Communities</span>
+          <h2>Best Subreddits</h2>
+          <p>Where practitioners actually talk. Quality varies — stick to the well-moderated technical ones.</p>
+        </div>
+        <div class="card-grid">
+          <a href="https://www.reddit.com/r/netsec/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">🔬</span>
+              <span class="badge">Technical</span>
+            </div>
+            <h3>r/netsec</h3>
+            <p>Highest-quality technical security research, vulnerability analysis, and exploit discussion. Strict moderation.</p>
+            <span class="card-link">Join →</span>
+          </a>
+          <a href="https://www.reddit.com/r/cybersecurity/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">🛡️</span>
+            </div>
+            <h3>r/cybersecurity</h3>
+            <p>Broad professional community: news, careers, tools, and industry discussion.</p>
+            <span class="card-link">Join →</span>
+          </a>
+          <a href="https://www.reddit.com/r/AskNetsec/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">❓</span>
+            </div>
+            <h3>r/AskNetsec</h3>
+            <p>Practical Q&A from experienced practitioners. Excellent for specific technical problems.</p>
+            <span class="card-link">Join →</span>
+          </a>
+          <a href="https://www.reddit.com/r/blueteamsec/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">🔵</span>
+            </div>
+            <h3>r/blueteamsec</h3>
+            <p>Detection engineering, threat hunting, IR, and defensive security focus.</p>
+            <span class="card-link">Join →</span>
+          </a>
+          <a href="https://www.reddit.com/r/Malware/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">🦠</span>
+            </div>
+            <h3>r/Malware</h3>
+            <p>Malware analysis, reverse engineering, and threat research discussions.</p>
+            <span class="card-link">Join →</span>
+          </a>
+          <a href="https://www.reddit.com/r/hacking/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <span class="card-icon">💻</span>
+            </div>
+            <h3>r/hacking</h3>
+            <p>Broader ethical hacking, CTFs, and learning resources. More beginner-friendly volume.</p>
+            <span class="card-link">Join →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools & More -->
+    <section id="tools" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">07 — Essential References</span>
+          <h2>Tools, Frameworks & References</h2>
+          <p>Foundational resources every seasoned practitioner keeps bookmarked.</p>
+        </div>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://attack.mitre.org/" target="_blank" rel="noopener">
+                <strong>MITRE ATT&CK</strong>
+                <span>Adversary behavior knowledge base</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cisa.gov/" target="_blank" rel="noopener">
+                <strong>CISA</strong>
+                <span>U.S. Cybersecurity & Infrastructure Security Agency</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://nvd.nist.gov/" target="_blank" rel="noopener">
+                <strong>National Vulnerability Database</strong>
+                <span>CVE details and scoring</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://owasp.org/" target="_blank" rel="noopener">
+                <strong>OWASP</strong>
+                <span>Application security standards and projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener">
+                <strong>Have I Been Pwned</strong>
+                <span>Breach notification service by Troy Hunt</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://www.sans.org/" target="_blank" rel="noopener">
+                <strong>SANS Institute</strong>
+                <span>Training, certifications, and research</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.first.org/" target="_blank" rel="noopener">
+                <strong>FIRST</strong>
+                <span>Forum of Incident Response and Security Teams</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/awesome-security" target="_blank" rel="noopener">
+                <strong>Awesome Security (GitHub)</strong>
+                <span>Curated lists of security tools and resources</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.virustotal.com/" target="_blank" rel="noopener">
+                <strong>VirusTotal</strong>
+                <span>File and URL analysis</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://urlscan.io/" target="_blank" rel="noopener">
+                <strong>urlscan.io</strong>
+                <span>URL and website scanning / investigation</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="section cta-section">
+      <div class="container">
+        <h2>Build your own signal stack</h2>
+        <p>Subscribe to 3–5 high-quality newsletters, follow a tight list of expert accounts, listen to 1–2 weekly podcasts, and keep CISA KEV + MITRE ATT&CK in your daily workflow. Quality over quantity wins.</p>
+        <p class="disclaimer">This site is a curated starting point for practitioners. Links point to external resources; always verify information independently and follow responsible disclosure practices.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🛡️</span>
+        <span>CyberPro Hub</span>
+      </div>
+      <p>Curated for seasoned cybersecurity professionals. Host on Cloudflare Pages free tier.</p>
+      <p class="footer-meta">Built as a static site · No trackers · Open for personalization</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
