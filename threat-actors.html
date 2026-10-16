@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical, sourced guide to advanced persistent threat groups, their assessed origins, typical targets, objectives, and defensive priorities.">
+  <title>Threat Actor Guide | CyberPro Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">CyberPro<span class="accent">Hub</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Threat guide sections">
+        <a href="index.html">Main Hub</a>
+        <a href="#state-actors">State-linked</a>
+        <a href="#criminal-groups">Cybercrime</a>
+        <a href="#defender-notes">Defender Notes</a>
+        <a href="#sources">Sources</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero threat-hero">
+      <div class="container">
+        <div class="hero-badge">Threat Intelligence Field Guide</div>
+        <h1>Know the <span class="gradient-text">threat actors.</span></h1>
+        <p class="hero-sub">A practical starting point for understanding who selected cyber threat groups are believed to be, what they pursue, whom they target, and what defenders should prioritize. These are broad public assessments, not a live threat feed. Images are original concept art, not official group insignia or attribution.</p>
+        <nav class="threat-nav" aria-label="On this page">
+          <a href="#state-actors">State-linked groups</a>
+          <a href="#criminal-groups">Financially motivated groups</a>
+          <a href="#defender-notes">What defenders can use</a>
+          <a href="#sources">Sources and methodology</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="state-actors" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01 — State-linked operations</span>
+          <h2>Espionage, access, and disruption</h2>
+          <p>An advanced persistent threat (APT) is a capable adversary that can sustain targeted operations over time. The term does not mean every incident is state-sponsored or that every group behaves the same way. Public attribution reflects analysts’ assessments and can change as evidence develops.</p>
+        </div>
+        <div class="card-grid actor-grid">
+          <article class="card actor-card">
+            <img class="actor-art" src="threat-espionage.svg" alt="Concept art for cyber espionage; not an official group emblem" loading="lazy" decoding="async">
+            <div class="card-top"><span class="actor-kind">State-linked · Espionage</span><span class="badge">APT28</span></div>
+            <h3>APT28 (Fancy Bear)</h3>
+            <dl>
+              <div><dt>Assessed origin</dt><dd>Russia; publicly attributed to the GRU, Russia’s military intelligence service.</dd></div>
+              <div><dt>Typical targets</dt><dd>Government, military, defense, diplomatic, and political organizations, including organizations of strategic interest to Russia.</dd></div>
+              <div><dt>What it seeks</dt><dd>Intelligence collection, strategic access, and in some campaigns information operations.</dd></div>
+              <div><dt>Defender focus</dt><dd>Harden identity and remote access; investigate credential theft, spearphishing, and unusual access to mail and collaboration systems.</dd></div>
+            </dl>
+            <p class="actor-source"><a href="https://attack.mitre.org/groups/G0007/" target="_blank" rel="noopener">MITRE ATT&CK profile →</a></p>
+          </article>
+
+          <article class="card actor-card">
+            <img class="actor-art" src="threat-espionage.svg" alt="Concept art for cyber espionage; not an official group emblem" loading="lazy" decoding="async">
+            <div class="card-top"><span class="actor-kind">State-linked · Espionage</span><span class="badge">APT29</span></div>
+            <h3>APT29 (Cozy Bear / Midnight Blizzard)</h3>
+            <dl>
+              <div><dt>Assessed origin</dt><dd>Russia; commonly attributed to the Foreign Intelligence Service (SVR).</dd></div>
+              <div><dt>Typical targets</dt><dd>Government and diplomatic bodies, think tanks, technology providers, and organizations holding useful foreign-policy or strategic information.</dd></div>
+              <div><dt>What it seeks</dt><dd>Quiet, long-term access for intelligence gathering, including access through trusted suppliers and cloud services.</dd></div>
+              <div><dt>Defender focus</dt><dd>Review identity-provider and cloud audit logs, OAuth/app consents, mailbox rules, and third-party access; investigate subtle persistence, not only malware alerts.</dd></div>
+            </dl>
+            <p class="actor-source"><a href="https://attack.mitre.org/groups/G0016/" target="_blank" rel="noopener">MITRE ATT&CK profile →</a></p>
+          </article>
+
+          <article class="card actor-card">
+            <img class="actor-art" src="threat-dual-motive.svg" alt="Concept art for overlapping espionage and financially motivated operations; not an official group emblem" loading="lazy" decoding="async">
+            <div class="card-top"><span class="actor-kind">State-linked · Dual motive</span><span class="badge">APT41</span></div>
+            <h3>APT41 (Winnti-related activity)</h3>
+            <dl>
+              <div><dt>Assessed origin</dt><dd>China; researchers assess APT41 as state-sponsored, while also reporting financially motivated operations.</dd></div>
+              <div><dt>Typical targets</dt><dd>A broad range of sectors, including healthcare, telecommunications, technology, finance, education, retail, and gaming.</dd></div>
+              <div><dt>What it seeks</dt><dd>Espionage and intellectual property alongside, in some operations, financial gain.</dd></div>
+              <div><dt>Defender focus</dt><dd>Prioritize exposed applications and patching, software supply-chain review, credential protection, and hunting for unauthorized remote access.</dd></div>
+            </dl>
+            <p class="actor-source"><a href="https://attack.mitre.org/groups/G0096/" target="_blank" rel="noopener">MITRE ATT&CK profile →</a></p>
+          </article>
+
+          <article class="card actor-card">
+            <img class="actor-art" src="threat-dual-motive.svg" alt="Concept art for overlapping espionage and financially motivated operations; not an official group emblem" loading="lazy" decoding="async">
+            <div class="card-top"><span class="actor-kind">State-linked · Espionage & revenue</span><span class="badge">DPRK</span></div>
+            <h3>Lazarus Group</h3>
+            <dl>
+              <div><dt>Assessed origin</dt><dd>North Korea; publicly attributed to state cyber operations. “Lazarus” is often used as an umbrella for overlapping clusters.</dd></div>
+              <div><dt>Typical targets</dt><dd>Financial institutions, cryptocurrency and blockchain organizations, defense and technology firms, media, and organizations relevant to North Korean interests.</dd></div>
+              <div><dt>What it seeks</dt><dd>Revenue generation, intelligence, and at times destructive effects; objectives differ across campaigns and subgroups.</dd></div>
+              <div><dt>Defender focus</dt><dd>Protect privileged accounts and software build/deployment systems; scrutinize unusual financial workflows, developer access, and remote-management activity.</dd></div>
+            </dl>
+            <p class="actor-source"><a href="https://attack.mitre.org/groups/G0032/" target="_blank" rel="noopener">MITRE ATT&CK profile →</a></p>
+          </article>
+
+          <article class="card actor-card">
+            <img class="actor-art" src="threat-espionage.svg" alt="Concept art for cyber espionage; not an official group emblem" loading="lazy" decoding="async">
+            <div class="card-top"><span class="actor-kind">State-linked · Espionage</span><span class="badge">Kimsuky</span></div>
+            <h3>Kimsuky (APT43)</h3>
+            <dl>
+              <div><dt>Assessed origin</dt><dd>North Korea; tracked as a DPRK-based cyber espionage group. North Korean cluster boundaries can overlap in public reporting.</dd></div>
+              <div><dt>Typical targets</dt><dd>South Korean government, think tanks, policy experts, and organizations in government, education, business services, and manufacturing.</dd></div>
+              <div><dt>What it seeks</dt><dd>Information about foreign policy, national security, sanctions, and the Korean Peninsula.</dd></div>
+              <div><dt>Defender focus</dt><dd>Train high-risk staff against tailored phishing and fake research or interview lures; use phishing-resistant MFA and monitor account recovery and mailbox changes.</dd></div>
+            </dl>
+            <p class="actor-source"><a href="https://attack.mitre.org/groups/G0094/" target="_blank" rel="noopener">MITRE ATT&CK profile →</a></p>
+          </article>
+
+          <article class="card actor-card">
+            <img class="actor-art" src="threat-disruption.svg" alt="Concept art for disruptive cyber operations; not an official group emblem" loading="lazy" decoding="async">
+            <div class="card-top"><span class="actor-kind">State-linked · Disruptive</span><span class="badge">Sandworm</span></div>
+            <h3>Sandworm Team</h3>
+            <dl>
+              <div><dt>Assessed origin</dt><dd>Russia; publicly attributed to GRU Unit 74455.</dd></div>
+              <div><dt>Typical targets</dt><dd>Ukraine and other government, energy, telecommunications, and critical-infrastructure organizations; operations have also caused global spillover.</dd></div>
+              <div><dt>What it seeks</dt><dd>Disruption and destruction as well as espionage; associated with destructive incidents including attacks on Ukrainian power and NotPetya.</dd></div>
+              <div><dt>Defender focus</dt><dd>Prepare for destructive impact: segment IT/OT, maintain tested offline recovery, monitor changes to industrial control access, and rehearse incident response.</dd></div>
+            </dl>
+            <p class="actor-source"><a href="https://attack.mitre.org/groups/G0034/" target="_blank" rel="noopener">MITRE ATT&CK profile →</a></p>
+          </article>
+
+          <article class="card actor-card">
+            <img class="actor-art" src="threat-prepositioning.svg" alt="Concept art for stealthy access and pre-positioning; not an official group emblem" loading="lazy" decoding="async">
+            <div class="card-top"><span class="actor-kind">State-linked · Pre-positioning</span><span class="badge">Volt Typhoon</span></div>
+            <h3>Volt Typhoon</h3>
+            <dl>
+              <div><dt>Assessed origin</dt><dd>People’s Republic of China (PRC), according to U.S. and allied government assessments.</dd></div>
+              <div><dt>Typical targets</dt><dd>U.S. critical infrastructure, especially communications, energy, transportation, and water systems, including Guam.</dd></div>
+              <div><dt>What it seeks</dt><dd>Stealthy access and potential pre-positioning for disruptive action in a future crisis, rather than only immediate data theft.</dd></div>
+              <div><dt>Defender focus</dt><dd>Hunt for valid-account abuse and living-off-the-land activity; reduce exposed management interfaces, secure edge devices, and assess IT-to-OT pathways.</dd></div>
+            </dl>
+            <p class="actor-source"><a href="https://attack.mitre.org/groups/G1017/" target="_blank" rel="noopener">MITRE profile →</a> · <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a" target="_blank" rel="noopener">CISA advisory →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="criminal-groups" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02 — Financially motivated operations</span>
+          <h2>Not every advanced actor is an APT</h2>
+          <p>Criminal groups can be organized, persistent, and highly capable without being state-sponsored. The distinction helps set expectations about goals, attribution, and response.</p>
+        </div>
+        <div class="card-grid actor-grid">
+          <article class="card actor-card criminal">
+            <img class="actor-art" src="threat-cybercrime.svg" alt="Concept art for financially motivated cybercrime; not an official group emblem" loading="lazy" decoding="async">
+            <div class="card-top"><span class="actor-kind">Cybercrime · Data theft & extortion</span><span class="badge">Not a classic APT</span></div>
+            <h3>ShinyHunters</h3>
+            <dl>
+              <div><dt>Assessed origin</dt><dd>No single country or government sponsor is established here. Public reporting associates the name with financially motivated cybercrime activity; do not infer a person’s location from a group label.</dd></div>
+              <div><dt>Typical targets</dt><dd>Organizations with valuable customer or employee data, including internet services, retailers, and companies using cloud and software-as-a-service platforms.</dd></div>
+              <div><dt>What it seeks</dt><dd>Monetizable data, account access, and leverage for extortion or sale. The name may refer to different actors or activity over time.</dd></div>
+              <div><dt>Defender focus</dt><dd>Protect identity and SaaS accounts, restrict bulk data exports, monitor anomalous API and administrator activity, and prepare a tested data-breach and extortion response.</dd></div>
+            </dl>
+            <p class="actor-source"><a href="https://www.cisa.gov/stopransomware" target="_blank" rel="noopener">CISA ransomware and extortion guidance →</a></p>
+          </article>
+        </div>
+        <p class="threat-note"><strong>Why include ShinyHunters?</strong> Because defenders encounter the name in breach and extortion reporting. It is useful to understand its reported criminal motives, but calling it an “APT” or assigning it a state origin without evidence would be misleading.</p>
+      </div>
+    </section>
+
+    <section id="defender-notes" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03 — Turn profiles into defense</span>
+          <h2>What security teams can take away</h2>
+          <p>Actor profiles are context for risk decisions—not a substitute for incident evidence, threat modeling, or controls that reduce risk across many adversaries.</p>
+        </div>
+        <div class="two-col">
+          <div>
+            <h3 class="subsection-title">Start with the mission</h3>
+            <ul class="link-list">
+              <li><a href="#state-actors"><strong>Espionage</strong><span>Expect quiet access to email, cloud identity, research, and sensitive communications; persistence may matter more than immediate impact.</span></a></li>
+              <li><a href="#state-actors"><strong>Pre-positioning or disruption</strong><span>Assess critical dependencies, IT/OT connections, recovery capability, and whether privileged access could enable operational impact.</span></a></li>
+              <li><a href="#criminal-groups"><strong>Extortion and data theft</strong><span>Prioritize identity, SaaS and API controls, bulk-export monitoring, incident communications, and breach-response readiness.</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="subsection-title">Use actor reporting carefully</h3>
+            <ul class="link-list">
+              <li><a href="https://attack.mitre.org/" target="_blank" rel="noopener"><strong>Map observed behavior to ATT&CK</strong><span>Use techniques to create detections and test coverage; do not treat a technique as proof of actor identity.</span></a></li>
+              <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener"><strong>Prioritize exposed, exploited weaknesses</strong><span>Patch internet-facing and identity infrastructure based on known exploitation and your organization’s exposure.</span></a></li>
+              <li><a href="#sources"><strong>Check the underlying source</strong><span>Separate confirmed incident facts from analytic attribution, aliases, and confidence statements.</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="threat-note threat-note-spaced"><strong>Attribution is not a detection.</strong> An actor’s nationality, alias, or suspected sponsor does not prove who is in your environment. Investigate telemetry and behaviors, preserve evidence, and use current advisories to guide response.</p>
+      </div>
+    </section>
+
+    <section id="sources" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04 — References</span>
+          <h2>Sources and methodology</h2>
+          <p>Profiles summarize public reporting available from MITRE ATT&CK and government advisories. Group names and boundaries vary between researchers; origin and sponsorship are presented as assessments, not certainty. Revisit primary sources before using this page for operational decisions.</p>
+        </div>
+        <ul class="source-list">
+          <li><a href="https://attack.mitre.org/groups/" target="_blank" rel="noopener">MITRE ATT&CK Groups →</a></li>
+          <li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a" target="_blank" rel="noopener">CISA / NSA / FBI: Volt Typhoon →</a></li>
+          <li><a href="https://www.cisa.gov/stopransomware" target="_blank" rel="noopener">CISA StopRansomware →</a></li>
+          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">CISA Known Exploited Vulnerabilities Catalog →</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><span>🛡️</span> CyberPro Hub</div>
+      <p>Threat Actor Field Guide · <a class="footer-link" href="index.html">Return to the main hub</a></p>
+      <p class="footer-meta">Public reporting can be incomplete or change over time. Last reviewed: October 2026.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

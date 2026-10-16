@@ -1,10 +1,21 @@
 <!DOCTYPE html>
+<!-- Rev 2026-10-16b: content-type/cache fix -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Seasoned Cybersecurity Pro Hub — Curated news feeds, expert sources, podcasts, X accounts, Reddit communities, and essential resources for serious practitioners.">
+  <meta name="description" content="A cybersecurity resource hub for Philadelphia-area practitioners, with curated threat intelligence, governance, incident response, cloud and AI security, news, training, and community resources.">
   <title>CyberPro Hub | Seasoned Practitioner Resources</title>
+  <link rel="canonical" href="https://danreither.win/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CyberPro Hub | Seasoned Practitioner Resources">
+  <meta property="og:description" content="Curated cybersecurity news, threat intelligence, practitioner tools, and Philadelphia-area community resources.">
+  <meta property="og:url" content="https://danreither.win/">
+  <meta property="og:image" content="https://danreither.win/dan-reither-cyberpro.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CyberPro Hub | Seasoned Practitioner Resources">
+  <meta name="twitter:description" content="Curated cybersecurity news, threat intelligence, practitioner tools, and Philadelphia-area community resources.">
+  <meta name="twitter:image" content="https://danreither.win/dan-reither-cyberpro.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -21,43 +32,143 @@
         <span class="logo-text">CyberPro<span class="accent">Hub</span></span>
       </a>
       <nav class="main-nav">
+        <a href="#me">Me</a>
         <a href="#news">News</a>
         <a href="#feeds">Feeds</a>
         <a href="#experts">Experts</a>
         <a href="#podcasts">Podcasts</a>
-        <a href="#xaccounts">X / Twitter</a>
+        <a href="#xaccounts">Social Voices</a>
         <a href="#reddit">Reddit</a>
         <a href="#tools">Tools</a>
+        <a href="threat-actors.html">Threats</a>
+        <a href="#philly-groups">Philly Groups</a>
+        <a href="#philly-events">Conferences</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
+    <!-- About Dan -->
+    <section id="me" class="hero">
       <div class="container">
-        <div class="hero-badge">Seasoned Practitioner Resource</div>
-        <h1>Stay sharp.<br><span class="gradient-text">Cut through the noise.</span></h1>
-        <p class="hero-sub">Curated cybersecurity intelligence sources, expert voices, podcasts, communities, and tools trusted by professionals who actually defend networks for a living.</p>
+        <div class="hero-badge">Me / Dan Reither</div>
+        <h1>Dan Reither.<br><span class="gradient-text">Cybersecurity practitioner.</span></h1>
+        <p class="hero-sub">I built CyberPro Hub to help cybersecurity practitioners cut through the noise with curated news, expert voices, podcasts, tools, and Philadelphia-area community resources.</p>
+        <p class="credential-row"><strong>Credentials</strong> CCISO · CISM · CISSP · CEH · GCIH</p>
+        <div class="profile-focus" aria-label="CyberPro Hub highlights">
+          <span>Practical security resources</span>
+          <span>Threat intelligence</span>
+          <span>Philadelphia cyber community</span>
+        </div>
+        <div class="contact-links" aria-label="Contact links">
+          <a class="contact-link" href="https://linkedin.com/in/danreither" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.34 18H5.67V9.4h2.67ZM7 8.23a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1ZM18.34 18h-2.67v-4.18c0-1-.02-2.29-1.4-2.29s-1.62 1.09-1.62 2.22V18H9.98V9.4h2.56v1.17h.04a2.8 2.8 0 0 1 2.52-1.39c2.7 0 3.2 1.78 3.2 4.1Z"/>
+              </svg>
+            </span>
+            <span class="contact-copy">
+              <span class="contact-label">Connect on</span>
+              <strong>LinkedIn</strong>
+            </span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+          <img class="contact-portrait" src="dan-reither-cyberpro.png" alt="Dan Reither, CyberPro Hub">
+          <a class="contact-link" id="emailContact" aria-label="Email Dan Reither">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="m4 7 8 6 8-6"/>
+              </svg>
+            </span>
+            <span class="contact-copy">
+              <span class="contact-label">Send a transmission</span>
+              <strong id="emailAddress"></strong>
+            </span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="daily-read">
+          <button class="daily-read-button" id="dailyReadButton" type="button" aria-label="Enable pop-ups to open all ten cybersecurity briefings at once">
+            <span class="daily-read-icon" aria-hidden="true">↗</span>
+            <span class="daily-read-copy">
+              <span class="daily-read-label">10 sources · 10 links</span>
+              <strong>Launch the Daily Signal Sweep</strong>
+            </span>
+            <span class="daily-read-count">10 BRIEFINGS</span>
+          </button>
+          <span class="daily-read-status" id="dailyReadStatus" role="status" aria-live="polite"></span>
+          <div class="daily-read-fallback" id="dailyReadFallback" hidden>
+            <span>Pop-ups blocked? Open them here:</span>
+            <div class="daily-read-fallback-links"></div>
+          </div>
+          <div class="intel-board-wrap">
+            <h3 class="intel-board-title">Daily Intel Board</h3>
+            <div class="intel-board" id="intelBoard"></div>
+          </div>
+        </div>
         <div class="hero-actions">
           <a href="#news" class="btn btn-primary">Explore Resources</a>
           <a href="#feeds" class="btn btn-secondary">RSS & Feeds</a>
         </div>
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-num">40+</span>
+            <span class="stat-num">100+</span>
             <span class="stat-label">Curated Sources</span>
           </div>
           <div class="stat">
-            <span class="stat-num">25+</span>
+            <span class="stat-num">8</span>
             <span class="stat-label">Expert Voices</span>
           </div>
           <div class="stat">
-            <span class="stat-num">15+</span>
+            <span class="stat-num">12</span>
             <span class="stat-label">Top Podcasts</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="resource-finder" aria-labelledby="resource-finder-title">
+      <div class="container resource-finder-inner">
+        <div>
+          <h2 id="resource-finder-title">Find your signal</h2>
+          <p>Search across the directory or narrow it to a category.</p>
+        </div>
+        <div class="resource-search-controls">
+          <label>
+            <span>Search resources</span>
+            <input id="resourceSearch" type="search" placeholder="Try “incident response” or “CISA”" autocomplete="off">
+          </label>
+          <label>
+            <span>Category</span>
+            <select id="resourceCategory">
+              <option value="all">All categories</option>
+              <option value="news">News & analysis</option>
+              <option value="feeds">Threat feeds & briefs</option>
+              <option value="experts">Experts</option>
+              <option value="podcasts">Podcasts</option>
+              <option value="xaccounts">Social accounts</option>
+              <option value="reddit">Reddit communities</option>
+              <option value="tools">Tools & references</option>
+              <option value="philly-groups">Philadelphia groups</option>
+              <option value="philly-events">Philadelphia events</option>
+            </select>
+          </label>
+          <button id="clearResourceSearch" type="button">Clear</button>
+        </div>
+        <p id="resourceSearchStatus" class="resource-search-status" role="status" aria-live="polite">Search the full directory.</p>
+      </div>
+    </section>
+
+    <section class="weekly-picks section section-alt" aria-labelledby="weekly-picks-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Rotating field notes</span>
+          <h2 id="weekly-picks-title">This Week’s Picks</h2>
+          <p>A rotating set of trusted briefings, with new picks each week.</p>
+        </div>
+        <div class="card-grid weekly-picks-grid" id="weeklyPicks"></div>
       </div>
     </section>
 
@@ -72,7 +183,7 @@
         <div class="card-grid">
           <a href="https://krebsonsecurity.com/" target="_blank" rel="noopener" class="card featured">
             <div class="card-top">
-              <span class="card-icon">🔍</span>
+              <img class="news-logo" src="news-krebs-security.png" alt="" loading="lazy">
               <span class="badge">Must Read</span>
             </div>
             <h3>Krebs on Security</h3>
@@ -81,7 +192,7 @@
           </a>
           <a href="https://thehackernews.com/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">📰</span>
+              <img class="news-logo" src="news-hacker-news.png" alt="" loading="lazy">
             </div>
             <h3>The Hacker News</h3>
             <p>Fast, widely-read daily coverage of threats, zero-days, malware, and major incidents. High volume, solid technical detail.</p>
@@ -89,7 +200,7 @@
           </a>
           <a href="https://www.bleepingcomputer.com/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">💻</span>
+              <img class="news-logo" src="news-bleepingcomputer.png" alt="" loading="lazy">
             </div>
             <h3>BleepingComputer</h3>
             <p>Excellent incident reports, ransomware tracking, malware analysis, and practical remediation guidance.</p>
@@ -97,7 +208,7 @@
           </a>
           <a href="https://www.darkreading.com/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">🌑</span>
+              <img class="news-logo" src="news-dark-reading.png" alt="" loading="lazy">
             </div>
             <h3>Dark Reading</h3>
             <p>Enterprise-focused security news, threat research, and analysis trusted by professionals.</p>
@@ -105,7 +216,7 @@
           </a>
           <a href="https://therecord.media/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">📡</span>
+              <img class="news-logo" src="news-the-record.png" alt="" loading="lazy">
             </div>
             <h3>The Record</h3>
             <p>Recorded Future’s news arm. Frequently first on breaking threat and policy stories.</p>
@@ -113,7 +224,7 @@
           </a>
           <a href="https://www.securityweek.com/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">📅</span>
+              <img class="news-logo" src="news-securityweek.png" alt="" loading="lazy">
             </div>
             <h3>SecurityWeek</h3>
             <p>Industry and enterprise security news, threat actor activity, and ICS/OT coverage.</p>
@@ -121,7 +232,7 @@
           </a>
           <a href="https://cyberscoop.com/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">🏛️</span>
+              <img class="news-logo" src="news-cyberscoop.png" alt="" loading="lazy">
             </div>
             <h3>CyberScoop</h3>
             <p>Strong on government, policy, and federal cybersecurity developments.</p>
@@ -129,11 +240,115 @@
           </a>
           <a href="https://www.schneier.com/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">🧠</span>
+              <img class="news-logo" src="news-schneier-on-security.png" alt="" loading="lazy">
             </div>
             <h3>Schneier on Security</h3>
             <p>Bruce Schneier — strategic thinking, cryptography, privacy, and security policy.</p>
             <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://arstechnica.com/security/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="news-ars-technica.png" alt="" loading="lazy">
+            </div>
+            <h3>Ars Technica Security</h3>
+            <p>In-depth reporting on vulnerabilities, breaches, privacy, and the technology behind today’s security stories.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.infosecurity-magazine.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="news-infosecurity-magazine.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>Infosecurity Magazine</h3>
+            <p>Global cybersecurity news, analysis, webinars, and research for security professionals.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.csoonline.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="news-cso-online.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>CSO Online</h3>
+            <p>Security leadership, risk management, incident response, and CISO-focused reporting.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.helpnetsecurity.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="news-help-net-security.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>Help Net Security</h3>
+            <p>Daily coverage of security incidents, research, and practitioner resources.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://securityboulevard.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="news-security-boulevard.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>Security Boulevard</h3>
+            <p>Security news and analysis aggregated from industry publications and community contributors.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.cyberdefensemagazine.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="news-cyber-defense-magazine.jpg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>Cyber Defense Magazine</h3>
+            <p>Digital magazine and newsletters covering defensive security, research, and industry trends.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.hipaajournal.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="news-hipaa-journal.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>HIPAA Journal</h3>
+            <p>Healthcare data breach reporting, privacy coverage, and HIPAA compliance guidance.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.scworld.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="logo-scmedia.ico" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>SC Media</h3>
+            <p>Security operations, risk, policy, and leadership reporting for enterprise practitioners.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.malwarebytes.com/blog" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="logo-malwarebytes.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>Malwarebytes Labs</h3>
+            <p>Threat research, malware analysis, and practical security-awareness reporting.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://securelist.com/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="logo-securelist.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>Securelist</h3>
+            <p>Kaspersky threat research and malware analysis. U.S. restrictions apply to some Kaspersky products and services; verify current rules and organizational policy before use.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://www.crowdstrike.com/blog/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="logo-crowdstrike.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>CrowdStrike Blog</h3>
+            <p>Adversary intelligence, incident analysis, and defensive insights from CrowdStrike researchers.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://cyware.com/cyber-security-news-articles" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="logo-cyware.ico" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>Cyware Cybersecurity News</h3>
+            <p>Curated cybersecurity news and threat updates for security teams.</p>
+            <span class="card-link">Visit →</span>
+          </a>
+          <a href="https://cisoseries.com/cybersecurity-headlines/" target="_blank" rel="noopener" class="card">
+            <div class="card-top">
+              <img class="news-logo" src="podcast-ciso-series.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>CISO Series: Cybersecurity Headlines</h3>
+            <p>Daily cybersecurity headlines and leadership-focused context from the CISO Series.</p>
+            <span class="card-link">Read & listen →</span>
           </a>
         </div>
       </div>
@@ -153,91 +368,139 @@
             <ul class="link-list">
               <li>
                 <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">
-                  <strong>CISA KEV Catalog</strong>
-                  <span>Authoritative known-exploited vulnerabilities. Non-negotiable for prioritization.</span>
+                  <img class="resource-logo" src="reference-cisa.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>CISA KEV Catalog</strong><span>Authoritative known-exploited vulnerabilities. Non-negotiable for prioritization.</span></span>
                 </a>
               </li>
               <li>
                 <a href="https://nvd.nist.gov/" target="_blank" rel="noopener">
-                  <strong>NVD (NIST)</strong>
-                  <span>National Vulnerability Database — the technical record.</span>
+                  <img class="resource-logo" src="reference-nvd.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>NVD (NIST)</strong><span>National Vulnerability Database — the technical record.</span></span>
                 </a>
               </li>
               <li>
                 <a href="https://attack.mitre.org/" target="_blank" rel="noopener">
-                  <strong>MITRE ATT&CK</strong>
-                  <span>Adversary tactics, techniques, and procedures knowledge base.</span>
+                  <img class="resource-logo resource-logo-mitre" src="reference-mitre.ico" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>MITRE ATT&CK</strong><span>Adversary tactics, techniques, and procedures knowledge base.</span></span>
                 </a>
               </li>
               <li>
                 <a href="https://otx.alienvault.com/" target="_blank" rel="noopener">
-                  <strong>AlienVault OTX</strong>
-                  <span>Open Threat Exchange — community threat intelligence.</span>
+                  <img class="resource-logo" src="feed-otx.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>AlienVault OTX</strong><span>Open Threat Exchange — community threat intelligence.</span></span>
                 </a>
               </li>
               <li>
                 <a href="https://unit42.paloaltonetworks.com/" target="_blank" rel="noopener">
-                  <strong>Unit 42 (Palo Alto)</strong>
-                  <span>High-quality campaign and malware research.</span>
+                  <img class="resource-logo" src="feed-unit42.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Unit 42 (Palo Alto)</strong><span>High-quality campaign and malware research.</span></span>
                 </a>
               </li>
               <li>
-                <a href="https://blog.talosintelligence.com/" target="_blank" rel="noopener">
-                  <strong>Cisco Talos</strong>
-                  <span>Threat research, vulnerability disclosures, and IOCs.</span>
+                <a href="https://www.malware-traffic-analysis.net/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-malware-traffic.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Malware-Traffic-Analysis.net</strong><span>PCAPs and practical analysis of real-world malware infections.</span></span>
                 </a>
               </li>
               <li>
-                <a href="https://www.microsoft.com/en-us/security/blog/" target="_blank" rel="noopener">
-                  <strong>Microsoft Security Blog / MSRC</strong>
-                  <span>First-party research and response center updates.</span>
+                <a href="https://www.ransomware.live/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-ransomware-live.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Ransomware.live</strong><span>Tracks ransomware-group activity and public leak-site claims; treat listings as unverified allegations.</span></span>
                 </a>
               </li>
               <li>
-                <a href="https://cloud.google.com/blog/topics/threat-intelligence" target="_blank" rel="noopener">
-                  <strong>Google Cloud Threat Intelligence (Mandiant)</strong>
-                  <span>APT and campaign analysis from Mandiant researchers.</span>
+                <a href="https://cvetrends.com/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-cve-trends.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>CVE Trends</strong><span>Community-driven view of vulnerabilities receiving attention; not a substitute for CISA KEV or vendor advisories.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://blog.shodan.io/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-shodan.jpg" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Shodan Blog</strong><span>Internet-exposure research and updates from the Shodan team.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://msrc.microsoft.com/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Microsoft Security Response Center</strong><span>Microsoft security updates, vulnerability guidance, and response information.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.activecountermeasures.com/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-active-countermeasures.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Active Countermeasures</strong><span>Threat-hunting research and open-source defensive tools.</span></span>
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h3 class="subsection-title">Top Newsletters</h3>
+            <h3 class="subsection-title">Newsletters & Research Briefs</h3>
             <ul class="link-list">
               <li>
                 <a href="https://risky.biz/" target="_blank" rel="noopener">
-                  <strong>Risky Business / Risky Bulletin</strong>
-                  <span>Patrick Gray — opinionated, practitioner-focused roundups. Essential.</span>
+                  <img class="resource-logo" src="feed-risky.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Risky Business / Risky Bulletin</strong><span>Patrick Gray — opinionated, practitioner-focused roundups. Essential.</span></span>
                 </a>
               </li>
               <li>
                 <a href="https://tldrsec.com/" target="_blank" rel="noopener">
-                  <strong>tl;dr sec</strong>
-                  <span>Clint Gibler — weekly AppSec & cloud security curation. Excellent signal.</span>
+                  <img class="resource-logo" src="feed-tldrsec.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>tl;dr sec</strong><span>Clint Gibler — weekly AppSec & cloud security curation. Excellent signal.</span></span>
                 </a>
               </li>
               <li>
                 <a href="https://tldr.tech/infosec" target="_blank" rel="noopener">
-                  <strong>TLDR InfoSec</strong>
-                  <span>Daily five-minute habit. Clean and efficient.</span>
+                  <img class="resource-logo" src="feed-tldr-tech.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>TLDR InfoSec</strong><span>Daily five-minute habit. Clean and efficient.</span></span>
                 </a>
               </li>
               <li>
                 <a href="https://www.sans.org/newsletters/newsbites/" target="_blank" rel="noopener">
-                  <strong>SANS NewsBites</strong>
-                  <span>Semiweekly executive-friendly headlines.</span>
+                  <img class="resource-logo" src="reference-sans.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>SANS NewsBites</strong><span>Semiweekly executive-friendly headlines.</span></span>
                 </a>
               </li>
               <li>
                 <a href="https://danielmiessler.com/newsletter/" target="_blank" rel="noopener">
-                  <strong>Unsupervised Learning</strong>
-                  <span>Daniel Miessler — cybersecurity + AI + strategy intersections.</span>
+                  <img class="resource-logo" src="feed-unsupervised-learning.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Unsupervised Learning</strong><span>Daniel Miessler — cybersecurity + AI + strategy intersections.</span></span>
                 </a>
               </li>
               <li>
                 <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank" rel="noopener">
-                  <strong>CISA Alerts & Advisories</strong>
-                  <span>Official U.S. government cybersecurity alerts.</span>
+                  <img class="resource-logo" src="reference-cisa.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>CISA Alerts & Advisories</strong><span>Official U.S. government cybersecurity alerts.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://blog.talosintelligence.com/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-talos.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Cisco Talos</strong><span>Threat research, vulnerability disclosures, and IOCs.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.microsoft.com/en-us/security/blog/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Microsoft Security Blog / MSRC</strong><span>First-party research and response center updates.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://cloud.google.com/blog/topics/threat-intelligence" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-google-cloud.ico" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Google Cloud Threat Intelligence (Mandiant)</strong><span>APT and campaign analysis from Mandiant researchers.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://isc.sans.edu/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-sans-isc.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>SANS Internet Storm Center</strong><span>Daily threat diaries, handler analysis, and internet activity monitoring.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.varonis.com/blog/" target="_blank" rel="noopener">
+                  <img class="resource-logo" src="feed-varonis.png" alt="" loading="lazy" decoding="async">
+                  <span class="resource-copy"><strong>Varonis Blog</strong><span>Data security research, threat analysis, and breach coverage.</span></span>
                 </a>
               </li>
             </ul>
@@ -256,7 +519,7 @@
         </div>
         <div class="card-grid experts-grid">
           <div class="card expert-card">
-            <div class="expert-avatar">BK</div>
+            <img class="expert-avatar" src="expert-brian-krebs.png" alt="Brian Krebs" loading="lazy" decoding="async">
             <h3>Brian Krebs</h3>
             <p class="expert-role">Investigative Journalist</p>
             <p>Deep cybercrime investigations. KrebsOnSecurity is required reading.</p>
@@ -266,7 +529,7 @@
             </div>
           </div>
           <div class="card expert-card">
-            <div class="expert-avatar">TH</div>
+            <img class="expert-avatar" src="expert-troy-hunt.png" alt="Troy Hunt" loading="lazy" decoding="async">
             <h3>Troy Hunt</h3>
             <p class="expert-role">Have I Been Pwned</p>
             <p>Breach transparency, web security education, and practical advice.</p>
@@ -276,7 +539,7 @@
             </div>
           </div>
           <div class="card expert-card">
-            <div class="expert-avatar">BS</div>
+            <img class="expert-avatar" src="expert-bruce-schneier.png" alt="Bruce Schneier" loading="lazy" decoding="async">
             <h3>Bruce Schneier</h3>
             <p class="expert-role">Cryptographer & Author</p>
             <p>Security thinking, privacy, policy, and long-term strategic perspective.</p>
@@ -286,7 +549,7 @@
             </div>
           </div>
           <div class="card expert-card">
-            <div class="expert-avatar">GC</div>
+            <img class="expert-avatar" src="expert-graham-cluley.png" alt="Graham Cluley" loading="lazy" decoding="async">
             <h3>Graham Cluley</h3>
             <p class="expert-role">Security Writer & Podcaster</p>
             <p>Clear analysis, Smashing Security co-host, long-time industry voice.</p>
@@ -296,7 +559,7 @@
             </div>
           </div>
           <div class="card expert-card">
-            <div class="expert-avatar">MH</div>
+            <img class="expert-avatar" src="expert-mikko-hypponen.png" alt="Mikko Hyppönen" loading="lazy" decoding="async">
             <h3>Mikko Hyppönen</h3>
             <p class="expert-role">Chief Research Officer, WithSecure</p>
             <p>Malware research, surveillance, and global threat perspective.</p>
@@ -305,7 +568,7 @@
             </div>
           </div>
           <div class="card expert-card">
-            <div class="expert-avatar">KB</div>
+            <img class="expert-avatar" src="expert-kevin-beaumont.png" alt="Kevin Beaumont" loading="lazy" decoding="async">
             <h3>Kevin Beaumont</h3>
             <p class="expert-role">Threat Researcher</p>
             <p>Sharp vulnerability and threat commentary. High signal.</p>
@@ -314,7 +577,7 @@
             </div>
           </div>
           <div class="card expert-card">
-            <div class="expert-avatar">RT</div>
+            <img class="expert-avatar" src="expert-rachel-tobac.png" alt="Rachel Tobac" loading="lazy" decoding="async">
             <h3>Rachel Tobac</h3>
             <p class="expert-role">Social Engineer & CEO</p>
             <p>Social engineering, human risk, and practical security awareness.</p>
@@ -323,7 +586,7 @@
             </div>
           </div>
           <div class="card expert-card">
-            <div class="expert-avatar">DM</div>
+            <img class="expert-avatar" src="expert-daniel-miessler.png" alt="Daniel Miessler" loading="lazy" decoding="async">
             <h3>Daniel Miessler</h3>
             <p class="expert-role">Unsupervised Learning</p>
             <p>Cybersecurity + AI + culture. Thoughtful long-form analysis.</p>
@@ -347,7 +610,7 @@
         <div class="card-grid podcast-grid">
           <a href="https://darknetdiaries.com/" target="_blank" rel="noopener" class="card podcast-card featured">
             <div class="card-top">
-              <span class="card-icon">🎙️</span>
+              <img class="podcast-logo" src="podcast-darknet-icon.png" alt="" loading="lazy">
               <span class="badge">Top Pick</span>
             </div>
             <h3>Darknet Diaries</h3>
@@ -357,7 +620,7 @@
           </a>
           <a href="https://risky.biz/netcasts/risky-business/" target="_blank" rel="noopener" class="card podcast-card">
             <div class="card-top">
-              <span class="card-icon">📻</span>
+              <img class="podcast-logo" src="podcast-risky-business.png" alt="" loading="lazy">
             </div>
             <h3>Risky Business</h3>
             <p class="meta">Patrick Gray · Weekly</p>
@@ -366,7 +629,7 @@
           </a>
           <a href="https://thecyberwire.com/podcasts/daily-podcast" target="_blank" rel="noopener" class="card podcast-card">
             <div class="card-top">
-              <span class="card-icon">📅</span>
+              <img class="podcast-logo" src="podcast-cyberwire-icon.png" alt="" loading="lazy">
             </div>
             <h3>CyberWire Daily</h3>
             <p class="meta">Daily · ~25 min</p>
@@ -375,7 +638,7 @@
           </a>
           <a href="https://twit.tv/shows/security-now" target="_blank" rel="noopener" class="card podcast-card">
             <div class="card-top">
-              <span class="card-icon">🔒</span>
+              <img class="podcast-logo" src="podcast-security-now.png" alt="" loading="lazy">
             </div>
             <h3>Security Now</h3>
             <p class="meta">Steve Gibson & Leo Laporte · Weekly</p>
@@ -384,7 +647,7 @@
           </a>
           <a href="https://www.smashingsecurity.com/" target="_blank" rel="noopener" class="card podcast-card">
             <div class="card-top">
-              <span class="card-icon">💥</span>
+              <img class="podcast-logo" src="podcast-smashing-security.png" alt="" loading="lazy">
             </div>
             <h3>Smashing Security</h3>
             <p class="meta">Graham Cluley & Carole Theriault</p>
@@ -393,7 +656,7 @@
           </a>
           <a href="https://cisoseries.com/" target="_blank" rel="noopener" class="card podcast-card">
             <div class="card-top">
-              <span class="card-icon">👔</span>
+              <img class="podcast-logo" src="podcast-ciso-series.png" alt="" loading="lazy">
             </div>
             <h3>CISO Series</h3>
             <p class="meta">David Spark + guests</p>
@@ -402,7 +665,7 @@
           </a>
           <a href="https://isc.sans.edu/podcast.html" target="_blank" rel="noopener" class="card podcast-card">
             <div class="card-top">
-              <span class="card-icon">⛈️</span>
+              <img class="podcast-logo" src="podcast-isc-icon.png" alt="" loading="lazy">
             </div>
             <h3>ISC StormCast</h3>
             <p class="meta">Johannes Ullrich · Daily short</p>
@@ -411,11 +674,47 @@
           </a>
           <a href="https://podcasts.apple.com/us/podcast/the-defensive-security-podcast/id961167167" target="_blank" rel="noopener" class="card podcast-card">
             <div class="card-top">
-              <span class="card-icon">🛡️</span>
+              <img class="podcast-logo" src="podcast-defensive-security.png" alt="" loading="lazy">
             </div>
             <h3>Defensive Security Podcast</h3>
             <p class="meta">Weekly</p>
             <p>Reviews high-profile breaches and extracts practical lessons for defenders.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://www.scworld.com/security-weekly" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <img class="podcast-logo" src="news-security-weekly.png" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>Security Weekly</h3>
+            <p class="meta">SC Media · Interviews and analysis</p>
+            <p>Security news, expert interviews, and practitioner-focused conversations from SC Media.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://podcasts.apple.com/us/podcast/cybersecurity-headlines/id1527478719" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <img class="podcast-logo" src="logo-apple-podcasts.svg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3>Cybersecurity Headlines</h3>
+            <p class="meta">Daily · Apple Podcasts</p>
+            <p>A concise daily briefing on cybersecurity news, incidents, and industry developments.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://podcasts.apple.com/us/podcast/malicious-life/id1252417787" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <span class="podcast-mark" aria-hidden="true">ML</span>
+            </div>
+            <h3>Malicious Life</h3>
+            <p class="meta">Cybercrime history · Archive</p>
+            <p>Story-driven accounts of cybercrime, malware, and the people and incidents that shaped security.</p>
+            <span class="card-link">Listen →</span>
+          </a>
+          <a href="https://podcasts.apple.com/us/podcast/click-here/id1225077306" target="_blank" rel="noopener" class="card podcast-card">
+            <div class="card-top">
+              <span class="podcast-mark" aria-hidden="true">CH</span>
+            </div>
+            <h3>Click Here</h3>
+            <p class="meta">Recorded Future News · Weekly</p>
+            <p>Reported stories about cyber threats, technology, and how digital events affect people and organizations.</p>
             <span class="card-link">Listen →</span>
           </a>
         </div>
@@ -427,31 +726,37 @@
     <section id="xaccounts" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">05 — X (Twitter)</span>
-          <h2>Best X Accounts to Follow</h2>
-          <p>High-signal accounts that post research, threat intel, vulnerability analysis, and useful commentary — not just engagement bait.</p>
+          <span class="section-tag">05 — X, Bluesky & Mastodon</span>
+          <h2>Security Voices to Follow</h2>
+          <p>High-signal accounts for research, threat intelligence, vulnerability analysis, and useful commentary. Cross-network links are included where profiles could be verified.</p>
         </div>
         <div class="account-grid">
-          <a href="https://x.com/briankrebs" target="_blank" rel="noopener" class="account-chip">@briankrebs</a>
-          <a href="https://x.com/troyhunt" target="_blank" rel="noopener" class="account-chip">@troyhunt</a>
-          <a href="https://x.com/GossiTheDog" target="_blank" rel="noopener" class="account-chip">@GossiTheDog</a>
-          <a href="https://x.com/mikko" target="_blank" rel="noopener" class="account-chip">@mikko</a>
-          <a href="https://x.com/gcluley" target="_blank" rel="noopener" class="account-chip">@gcluley</a>
-          <a href="https://x.com/schneierblog" target="_blank" rel="noopener" class="account-chip">@schneierblog</a>
-          <a href="https://x.com/SwiftOnSecurity" target="_blank" rel="noopener" class="account-chip">@SwiftOnSecurity</a>
-          <a href="https://x.com/RachelTobac" target="_blank" rel="noopener" class="account-chip">@RachelTobac</a>
-          <a href="https://x.com/DanielMiessler" target="_blank" rel="noopener" class="account-chip">@DanielMiessler</a>
-          <a href="https://x.com/cyb3rops" target="_blank" rel="noopener" class="account-chip">@cyb3rops</a>
-          <a href="https://x.com/malwaretechblog" target="_blank" rel="noopener" class="account-chip">@malwaretechblog</a>
-          <a href="https://x.com/hasherezade" target="_blank" rel="noopener" class="account-chip">@hasherezade</a>
-          <a href="https://x.com/taviso" target="_blank" rel="noopener" class="account-chip">@taviso</a>
-          <a href="https://x.com/maddiestone" target="_blank" rel="noopener" class="account-chip">@maddiestone</a>
-          <a href="https://x.com/MalwareJake" target="_blank" rel="noopener" class="account-chip">@MalwareJake</a>
-          <a href="https://x.com/RobertMLee" target="_blank" rel="noopener" class="account-chip">@RobertMLee</a>
-          <a href="https://x.com/chrisinsec" target="_blank" rel="noopener" class="account-chip">@chrisinsec</a>
-          <a href="https://x.com/securityweekly" target="_blank" rel="noopener" class="account-chip">@securityweekly</a>
-          <a href="https://x.com/ChuckDBrooks" target="_blank" rel="noopener" class="account-chip">@ChuckDBrooks</a>
-          <a href="https://x.com/a_greenberg" target="_blank" rel="noopener" class="account-chip">@a_greenberg</a>
+          <a href="https://x.com/briankrebs" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="expert-brian-krebs.png" alt=""><span>@briankrebs</span></a>
+          <a href="https://x.com/troyhunt" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="expert-troy-hunt.png" alt=""><span>@troyhunt</span></a>
+          <a href="https://x.com/GossiTheDog" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="expert-kevin-beaumont.png" alt=""><span>@GossiTheDog</span></a>
+          <a href="https://x.com/mikko" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="expert-mikko-hypponen.png" alt=""><span>@mikko</span></a>
+          <a href="https://x.com/gcluley" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="expert-graham-cluley.png" alt=""><span>@gcluley</span></a>
+          <a href="https://x.com/schneierblog" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="expert-bruce-schneier.png" alt=""><span>@schneierblog</span></a>
+          <a href="https://x.com/SwiftOnSecurity" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-swiftonsecurity.jpg" alt="" loading="lazy" decoding="async"><span>@SwiftOnSecurity</span></a>
+          <a href="https://x.com/RachelTobac" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="expert-rachel-tobac.png" alt=""><span>@RachelTobac</span></a>
+          <a href="https://x.com/DanielMiessler" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="expert-daniel-miessler.png" alt=""><span>@DanielMiessler</span></a>
+          <a href="https://x.com/cyb3rops" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-cyb3rops.jpg" alt="" loading="lazy" decoding="async"><span>@cyb3rops</span></a>
+          <a href="https://x.com/malwaretechblog" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-malwaretechblog.png" alt="" loading="lazy" decoding="async"><span>@malwaretechblog</span></a>
+          <a href="https://x.com/hasherezade" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-hasherezade.jpg" alt="" loading="lazy" decoding="async"><span>@hasherezade</span></a>
+          <a href="https://x.com/taviso" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-taviso.jpg" alt="" loading="lazy" decoding="async"><span>@taviso</span></a>
+          <a href="https://x.com/maddiestone" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-maddiestone.jpg" alt="" loading="lazy" decoding="async"><span>@maddiestone</span></a>
+          <a href="https://x.com/MalwareJake" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-malwarejake.jpg" alt="" loading="lazy" decoding="async"><span>@MalwareJake</span></a>
+          <a href="https://x.com/RobertMLee" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-robertmlee.jpg" alt="" loading="lazy" decoding="async"><span>@RobertMLee</span></a>
+          <a href="https://x.com/chrisinsec" target="_blank" rel="noopener" class="account-chip"><span class="account-initials" aria-hidden="true">CI</span><span>@chrisinsec</span></a>
+          <a href="https://x.com/securityweekly" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-securityweekly.jpg" alt="" loading="lazy" decoding="async"><span>@securityweekly</span></a>
+          <a href="https://x.com/ChuckDBrooks" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-chuckdbrooks.jpg" alt="" loading="lazy" decoding="async"><span>@ChuckDBrooks</span></a>
+          <a href="https://x.com/a_greenberg" target="_blank" rel="noopener" class="account-chip"><img class="account-avatar" src="x-a-greenberg.jpg" alt="" loading="lazy" decoding="async"><span>@a_greenberg</span></a>
+          <a href="https://bsky.app/profile/troyhunt.com" target="_blank" rel="noopener" class="account-chip account-chip-social"><img class="account-avatar" src="expert-troy-hunt.png" alt=""><span>@troyhunt.com</span><span class="account-platform">Bluesky</span></a>
+          <a href="https://infosec.exchange/@troyhunt" target="_blank" rel="noopener" class="account-chip account-chip-social"><img class="account-avatar" src="expert-troy-hunt.png" alt=""><span>@troyhunt</span><span class="account-platform">Mastodon</span></a>
+          <a href="https://bsky.app/profile/grahamcluley.com" target="_blank" rel="noopener" class="account-chip account-chip-social"><img class="account-avatar" src="expert-graham-cluley.png" alt=""><span>@grahamcluley.com</span><span class="account-platform">Bluesky</span></a>
+          <a href="https://cyberplace.social/@GossiTheDog" target="_blank" rel="noopener" class="account-chip account-chip-social"><img class="account-avatar" src="expert-kevin-beaumont.png" alt=""><span>@GossiTheDog</span><span class="account-platform">Mastodon</span></a>
+          <a href="https://bsky.app/profile/racheltobac.bsky.social" target="_blank" rel="noopener" class="account-chip account-chip-social"><img class="account-avatar" src="expert-rachel-tobac.png" alt=""><span>@racheltobac.bsky.social</span><span class="account-platform">Bluesky</span></a>
+          <a href="https://bsky.app/profile/danielmiessler.bsky.social" target="_blank" rel="noopener" class="account-chip account-chip-social"><img class="account-avatar" src="expert-daniel-miessler.png" alt=""><span>@danielmiessler.bsky.social</span><span class="account-platform">Bluesky</span></a>
         </div>
         <p class="note">Also consider curated lists such as Florian Roth’s (@cyb3rops) high-signal Cyber list for a ready-made timeline of quality accounts.</p>
       </div>
@@ -468,7 +773,7 @@
         <div class="card-grid">
           <a href="https://www.reddit.com/r/netsec/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">🔬</span>
+              <img class="reddit-logo" src="reddit-icon.png" alt="Reddit logo" loading="lazy" decoding="async">
               <span class="badge">Technical</span>
             </div>
             <h3>r/netsec</h3>
@@ -477,7 +782,7 @@
           </a>
           <a href="https://www.reddit.com/r/cybersecurity/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">🛡️</span>
+              <img class="reddit-logo" src="reddit-icon.png" alt="Reddit logo" loading="lazy" decoding="async">
             </div>
             <h3>r/cybersecurity</h3>
             <p>Broad professional community: news, careers, tools, and industry discussion.</p>
@@ -485,7 +790,7 @@
           </a>
           <a href="https://www.reddit.com/r/AskNetsec/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">❓</span>
+              <img class="reddit-logo" src="reddit-icon.png" alt="Reddit logo" loading="lazy" decoding="async">
             </div>
             <h3>r/AskNetsec</h3>
             <p>Practical Q&A from experienced practitioners. Excellent for specific technical problems.</p>
@@ -493,7 +798,7 @@
           </a>
           <a href="https://www.reddit.com/r/blueteamsec/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">🔵</span>
+              <img class="reddit-logo" src="reddit-icon.png" alt="Reddit logo" loading="lazy" decoding="async">
             </div>
             <h3>r/blueteamsec</h3>
             <p>Detection engineering, threat hunting, IR, and defensive security focus.</p>
@@ -501,7 +806,7 @@
           </a>
           <a href="https://www.reddit.com/r/Malware/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">🦠</span>
+              <img class="reddit-logo" src="reddit-icon.png" alt="Reddit logo" loading="lazy" decoding="async">
             </div>
             <h3>r/Malware</h3>
             <p>Malware analysis, reverse engineering, and threat research discussions.</p>
@@ -509,7 +814,7 @@
           </a>
           <a href="https://www.reddit.com/r/hacking/" target="_blank" rel="noopener" class="card">
             <div class="card-top">
-              <span class="card-icon">💻</span>
+              <img class="reddit-logo" src="reddit-icon.png" alt="Reddit logo" loading="lazy" decoding="async">
             </div>
             <h3>r/hacking</h3>
             <p>Broader ethical hacking, CTFs, and learning resources. More beginner-friendly volume.</p>
@@ -531,68 +836,957 @@
           <ul class="link-list">
             <li>
               <a href="https://attack.mitre.org/" target="_blank" rel="noopener">
-                <strong>MITRE ATT&CK</strong>
-                <span>Adversary behavior knowledge base</span>
+                <img class="resource-logo resource-logo-mitre" src="reference-mitre.ico" alt="MITRE ATT&CK logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>MITRE ATT&CK</strong><span>Adversary behavior knowledge base</span></span>
               </a>
             </li>
             <li>
               <a href="https://www.cisa.gov/" target="_blank" rel="noopener">
-                <strong>CISA</strong>
-                <span>U.S. Cybersecurity & Infrastructure Security Agency</span>
+                <img class="resource-logo" src="reference-cisa.png" alt="CISA logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CISA</strong><span>U.S. Cybersecurity & Infrastructure Security Agency</span></span>
               </a>
             </li>
             <li>
               <a href="https://nvd.nist.gov/" target="_blank" rel="noopener">
-                <strong>National Vulnerability Database</strong>
-                <span>CVE details and scoring</span>
+                <img class="resource-logo" src="reference-nvd.png" alt="NIST National Vulnerability Database icon" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>National Vulnerability Database</strong><span>CVE details and scoring</span></span>
               </a>
             </li>
             <li>
               <a href="https://owasp.org/" target="_blank" rel="noopener">
-                <strong>OWASP</strong>
-                <span>Application security standards and projects</span>
+                <img class="resource-logo" src="reference-owasp.png" alt="OWASP logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>OWASP</strong><span>Application security standards and projects</span></span>
               </a>
             </li>
             <li>
               <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener">
-                <strong>Have I Been Pwned</strong>
-                <span>Breach notification service by Troy Hunt</span>
+                <img class="resource-logo" src="reference-hibp.png" alt="Have I Been Pwned logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Have I Been Pwned</strong><span>Breach notification service by Troy Hunt</span></span>
               </a>
             </li>
           </ul>
           <ul class="link-list">
             <li>
               <a href="https://www.sans.org/" target="_blank" rel="noopener">
-                <strong>SANS Institute</strong>
-                <span>Training, certifications, and research</span>
+                <img class="resource-logo" src="reference-sans.png" alt="SANS Institute logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>SANS Institute</strong><span>Training, certifications, and research</span></span>
               </a>
             </li>
             <li>
               <a href="https://www.first.org/" target="_blank" rel="noopener">
-                <strong>FIRST</strong>
-                <span>Forum of Incident Response and Security Teams</span>
+                <img class="resource-logo" src="reference-first.png" alt="FIRST logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>FIRST</strong><span>Forum of Incident Response and Security Teams</span></span>
               </a>
             </li>
             <li>
-              <a href="https://github.com/awesome-security" target="_blank" rel="noopener">
-                <strong>Awesome Security (GitHub)</strong>
-                <span>Curated lists of security tools and resources</span>
+              <a href="https://github.com/sbilly/awesome-security" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-github.png" alt="GitHub logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Awesome Security (GitHub)</strong><span>Community-maintained list of security tools and resources; review project activity and each tool before adoption.</span></span>
               </a>
             </li>
             <li>
-              <a href="https://www.virustotal.com/" target="_blank" rel="noopener">
-                <strong>VirusTotal</strong>
-                <span>File and URL analysis</span>
+              <a href="https://www.virustotal.com/gui/home/search" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-virustotal.png" alt="VirusTotal logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>VirusTotal</strong><span>File and URL analysis</span></span>
               </a>
             </li>
             <li>
               <a href="https://urlscan.io/" target="_blank" rel="noopener">
-                <strong>urlscan.io</strong>
-                <span>URL and website scanning / investigation</span>
+                <img class="resource-logo" src="reference-urlscan.png" alt="urlscan.io logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>urlscan.io</strong><span>URL and website scanning / investigation</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="threat-actors.html">
+                <img class="resource-logo resource-logo-mitre" src="reference-mitre.ico" alt="MITRE ATT&CK logo" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Advanced Threat Actor Guide</strong><span>Compare state-linked threat groups, their targets, and defensive priorities</span></span>
               </a>
             </li>
           </ul>
         </div>
+        <h3 class="subsection-title">Security Standards & Frameworks</h3>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://atlas.mitre.org/" target="_blank" rel="noopener">
+                <img class="resource-logo resource-logo-mitre" src="reference-mitre.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>MITRE ATLAS</strong><span>Threat modeling and adversary techniques for AI-enabled systems.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://owaspai.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-owasp.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>OWASP AI Exchange</strong><span>Community-maintained guidance for securing AI systems.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cisecurity.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-cis.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Center for Internet Security</strong><span>CIS Controls, Benchmarks, and MS-ISAC resources.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://hitrustalliance.net/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-hitrust.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>HITRUST</strong><span>Security and privacy assurance framework used across regulated industries.</span></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://www.cyber.gc.ca/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-cyber-gc.jpg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Canadian Centre for Cyber Security</strong><span>Canadian cyber alerts, guidance, and active vulnerability advisories.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://niccs.cisa.gov/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-cisa.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>NICCS</strong><span>U.S. cybersecurity training, workforce, and career resources.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://cloudsecurityalliance.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-csa.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Cloud Security Alliance</strong><span>Cloud security research, practical guidance, and community resources.</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h3 class="subsection-title">Government Advisories & Risk Frameworks</h3>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://www.cisa.gov/stopransomware" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-cisa.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CISA StopRansomware</strong><span>Ransomware prevention, response guidance, and joint advisories.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cisa.gov/resources-tools/resources" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-cisa.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CISA Resources & Tools</strong><span>Public cybersecurity guidance and practical tools from CISA.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cisa.gov/resources-tools/services" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-cisa.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CISA No-Cost Services & Tools</strong><span>Free services that help organizations assess and improve security.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-nist.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>NIST Cybersecurity Framework</strong><span>Risk-management outcomes and guidance for cybersecurity programs.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nist.gov/cybersecurity-and-privacy" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-nist.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>NIST Cybersecurity & Privacy</strong><span>Frameworks and guidance spanning cybersecurity, privacy, identity, and risk.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://nvd.nist.gov/developers/vulnerabilities" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-nvd.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>NVD Vulnerability APIs</strong><span>Programmatic access to National Vulnerability Database data.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.first.org/epss/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-first.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>FIRST EPSS</strong><span>Estimate the likelihood that a published vulnerability will be exploited.</span></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://www.cisecurity.org/controls" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-cis.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CIS Critical Security Controls</strong><span>Prioritized safeguards for reducing common cybersecurity risks.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://downloads.cisecurity.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-cis.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CIS Downloads</strong><span>Official downloads for CIS Benchmarks, Controls, and related resources.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.mitre.org/focus-areas/cybersecurity/capabilities-resources" target="_blank" rel="noopener">
+                <img class="resource-logo resource-logo-mitre" src="reference-mitre.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>MITRE Cybersecurity Resources</strong><span>Research and tools for cyber defense, forensics, supply chain, and architecture.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://niccs.cisa.gov/workforce-development/nice-framework" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-cisa.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>NICE Workforce Framework</strong><span>Common language for cybersecurity work roles, tasks, knowledge, and skills.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-fda.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>FDA Medical Device Cybersecurity</strong><span>Cybersecurity guidance and regulatory resources for medical devices.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3917556/nsa-jointly-releases-guidance-for-mitigating-active-directory-compromises/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-nsa.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>NSA: Mitigating Active Directory Compromises</strong><span>Joint hardening guidance for detecting and reducing Active Directory compromise risk.</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h3 class="subsection-title">Threat Intelligence, IOC & Malware Analysis</h3>
+        <p class="threat-note"><strong>Privacy:</strong> Services such as VirusTotal, Shodan, and public malware sandboxes may retain searches or share submitted samples. Never upload confidential, proprietary, patient, or regulated data; check each service's terms before analysis.</p>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://gtidocs.virustotal.com/docs/manage-threat-profiles" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-virustotal.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>VirusTotal Threat Profiles</strong><span>Documentation for managing and organizing threat profiles.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://talosintelligence.com/reputation_center/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-talos.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Cisco Talos Reputation Center</strong><span>Check reputation information for IP addresses, domains, and files.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://threatfox.abuse.ch/browse" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-abuse-ch.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>ThreatFox IOC Database</strong><span>Community-shared indicators of compromise for threat research.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://urlhaus.abuse.ch/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-abuse-ch.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>URLhaus</strong><span>Track URLs used to distribute malware.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.phishtank.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-phishtank.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>PhishTank</strong><span>Community phishing reports; service access and registration may vary. Verify indicators with independent sources.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://urlfiltering.paloaltonetworks.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-unit42.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Palo Alto Networks URL Filtering Test</strong><span>Check how Palo Alto Networks categorizes a URL.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://dnstwist.it/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-dnstwist.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>dnstwist Phishing Domain Scanner</strong><span>Find lookalike domains that may be used for phishing or brand impersonation.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/elceef/dnstwist" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-github.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>dnstwist on GitHub</strong><span>Open-source domain permutation and phishing-domain discovery tool.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://threatmap.checkpoint.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-checkpoint.svg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Check Point Live Cyber Threat Map</strong><span>Visual overview of observed threat activity; use for awareness, not as a complete threat picture.</span></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Microsoft Threat Intelligence</strong><span>Threat research, actor tracking, and defensive analysis from Microsoft.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://any.run/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-anyrun.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>ANY.RUN Interactive Malware Sandbox</strong><span>Interactive analysis of suspicious files and URLs. Do not submit sensitive samples.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.joesandbox.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-joesandbox.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Joe Sandbox Cloud</strong><span>Automated malware and URL analysis; check sharing settings before submitting.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.hybrid-analysis.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-hybrid-analysis.svg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Hybrid Analysis</strong><span>Community malware analysis; review sample visibility and privacy terms.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://virusscan.jotti.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-jotti.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Jotti Malware Scan</strong><span>Multi-engine file scanning. Never upload confidential or regulated files.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://malwareunicorn.org/workshops/re101.html" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-malwareunicorn.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Malware Unicorn: Reverse Engineering 101</strong><span>Hands-on introductory reverse-engineering workshop materials.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://packetstormsecurity.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-packetstorm.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Packet Storm Security</strong><span>Security advisories, tools, and vulnerability-related research; test tools responsibly.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/kevoreilly/CAPEv2" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-github.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CAPE Sandbox (CAPEv2)</strong><span>Actively maintained Cuckoo-derived malware-analysis platform; isolate samples and review safe-handling guidance before use.</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h3 class="subsection-title">Incident Response & SOC Operations</h3>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://gitlab.com/syntax-ir/playbooks" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-gitlab.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Public Incident Response Playbooks</strong><span>Community-maintained playbooks and references for common incident scenarios.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.sans.org/information-security-policy/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-sans.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>SANS Information Security Policy Templates</strong><span>Policy templates and guidance for common security program needs.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.esecurityplanet.com/networks/incident-response-how-to-prepare-for-attacks-and-breaches/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-esecurityplanet.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Incident Response Plan Guide & Template</strong><span>Practical overview and planning template for preparing for incidents.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/respond-machine-alerts" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Microsoft Defender: Respond to Machine Alerts</strong><span>Endpoint response actions and investigation guidance.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/live-response-command-examples" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Microsoft Defender: Live Response Commands</strong><span>Command examples for endpoint investigations and live response.</span></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Respond to a Compromised Email Account</strong><span>Microsoft 365 guidance for investigating and recovering a compromised mailbox.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Azure/Azure-Sentinel" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-github.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Microsoft Sentinel on GitHub</strong><span>Community detections, analytics, automation, and other Sentinel content.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/default.aspx" target="_blank" rel="noopener">
+                <img class="resource-logo" src="training-ultimate-windows-security.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Windows Security Log Encyclopedia</strong><span>Reference for Windows Security event IDs and their meanings.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.purple-knight.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-purple-knight.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Purple Knight</strong><span>Assess Active Directory security posture in environments you are authorized to test.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cisco.com/c/en/us/products/security/technical-alliance-partners/hive-project.html" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-talos.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Cisco Security & TheHive Project</strong><span>Information about TheHive incident-response platform and Cisco integrations.</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h3 class="subsection-title">Cloud, Identity & AI Security</h3>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://learn.microsoft.com/en-us/security/zero-trust/assessment/get-started" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Microsoft Zero Trust Assessment</strong><span>Assess Zero Trust maturity and identify areas for improvement.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://learn.microsoft.com/en-us/windows-server/security/kerberos/detect-remediate-rc4-kerberos" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Detect & Remediate RC4 in Kerberos</strong><span>Identify and reduce legacy RC4 Kerberos usage in Windows environments.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://adoption.microsoft.com/en-us/security-copilot/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Microsoft Security Copilot Adoption</strong><span>Resources for evaluating and adopting AI-assisted security operations.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://learn.microsoft.com/en-us/defender-xdr/phishing-triage-agent" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Microsoft Phishing Triage Agent</strong><span>Documentation for AI-assisted phishing triage capabilities.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Azure/Copilot-For-Security/tree/main/Logic%20Apps/SecCopilot-UserReportedPhishing-FuncApp_parsing" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-github.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Security Copilot Phishing Workflow</strong><span>Example workflow for a reported-phishing triage scenario.</span></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://techcommunity.microsoft.com/blog/microsoft-security-blog/security-copilot-skilling-series/4458687" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Security Copilot Skilling Series</strong><span>Learning resources for security professionals exploring Security Copilot.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.sans.org/cyber-security-courses/cloud-security-essentials/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-sans.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>SANS Cloud Security Essentials</strong><span>Paid foundational training for cloud security practitioners.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.sans.org/cyber-security-courses/public-cloud-security-aws-azure-gcp/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-sans.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>SANS Public Cloud Security</strong><span>Paid advanced security training for AWS, Azure, and Google Cloud.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://education.securiti.ai/certifications/ai-governance/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-securiti.svg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>AI Security & Governance Certification</strong><span>AI governance and privacy/security certification details; review recognition and cost before enrolling.</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h3 class="subsection-title">Certifications & Professional Communities</h3>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://www.isc2.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="cert-isc2.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>ISC2</strong><span>Professional community and certifications including CISSP and CCSP.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.isaca.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="cert-isaca.jpg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>ISACA</strong><span>Certifications and resources for security, audit, risk, and governance.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.giac.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="cert-giac.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>GIAC</strong><span>Practical, role-focused information security certifications.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.eccouncil.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="cert-eccouncil.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>EC-Council</strong><span>Cybersecurity certification programs, including ethical hacking.</span></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://ciso.eccouncil.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="cert-eccouncil.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>EC-Council CCISO</strong><span>Leadership certification program for experienced security executives.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://globalcisocouncil.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="cert-global-ciso.jpg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Global CISO Council</strong><span>Peer network and resources for cybersecurity leaders.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://rafeeqrehman.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-ciso-mindmap.jpg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CISO MindMap</strong><span>Rafeeq Rehman's overview of security leadership responsibilities and priorities.</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h3 class="subsection-title">Career, Community & Events</h3>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://cybersocialhub.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-cybersocialhub.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Cyber Social Hub</strong><span>Community for digital investigators and cybersecurity professionals.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cyberseek.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-cyberseek.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CyberSeek</strong><span>Cybersecurity career pathways, workforce data, and regional job-market insights.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cyberseek.org/heatmap.html" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-cyberseek.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CyberSeek Supply & Demand Heat Map</strong><span>Explore cybersecurity workforce supply and demand by location.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.cyber.nj.gov/connect/njccic-membership/become-a-member" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-njccic.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>NJCCIC Membership & Community</strong><span>Regional cyber-threat intelligence, information sharing, and community resources.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://healthsectorcouncil.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-health-sector-council.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Health Sector Coordinating Council</strong><span>Healthcare cybersecurity working groups, resources, and collaboration.</span></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://securitycommunity.microsoft.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Microsoft Security Community</strong><span>Community discussions and resources for Microsoft security practitioners.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/SecurityComplianceIdentity" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-microsoft.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Microsoft Security & Compliance Community</strong><span>Technical posts, product guidance, and peer discussions.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://infosec-conferences.com/us-state/pennsylvania" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-infosec-conferences.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Pennsylvania Cybersecurity Conferences</strong><span>Event directory for Pennsylvania; verify dates and details with organizers.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://cyberscoop.com/attend/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="news-cyberscoop.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CyberScoop Events</strong><span>Cybersecurity policy and industry event listings.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.antisyphontraining.com/event/incident-response-summit/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-antisyphon.webp" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Antisyphon Incident Response Summit</strong><span>Incident-response training and event information; check for current or future sessions.</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h3 class="subsection-title">Learning & Training</h3>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://portswigger.net/web-security" target="_blank" rel="noopener">
+                <img class="resource-logo" src="training-portswigger.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>PortSwigger Web Security Academy</strong><span>Free interactive web application security lessons and labs.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.hacksplaining.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="training-hacksplaining.jpg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Hacksplaining</strong><span>Interactive lessons explaining common web vulnerabilities.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.kali.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="training-kali.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Kali Linux</strong><span>Linux distribution for authorized penetration testing and security auditing.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pentesteracademy.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="training-pentester-academy.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Pentester Academy</strong><span>Hands-on courses in penetration testing, forensics, and red teaming.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.sans.org/cyber-security-courses/reverse-engineering-malware-malware-analysis-tools-techniques/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-sans.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>SANS Reverse Engineering Malware</strong><span>Advanced malware reverse-engineering and analysis training; paid course.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://skillsforall.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="training-cisco-skills.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Cisco Skills for All</strong><span>Free introductory networking and cybersecurity courses.</span></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://www.bugcrowd.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="training-bugcrowd.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Bugcrowd</strong><span>Bug bounty platform and resources for security researchers.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.knowbe4.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="training-knowbe4.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>KnowBe4</strong><span>Security awareness training and phishing education resources.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ultimatewindowssecurity.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="training-ultimate-windows-security.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Ultimate Windows Security</strong><span>Windows security and event-log references by Randy Franklin Smith.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.giac.org/certifications/reverse-engineering-malware-grem/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="cert-giac.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>GIAC Reverse Engineering Malware (GREM)</strong><span>Certification details for malware reverse engineering.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://resources.infosecinstitute.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="logo-infosec-institute.ico" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Infosec Institute Resources</strong><span>Cybersecurity training and certification-preparation content.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://nationalcyberleague.org/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="cert-ncl.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>National Cyber League</strong><span>Cybersecurity competitions and practice for students and professionals.</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h3 class="subsection-title">Tools & Lookups</h3>
+        <div class="two-col">
+          <ul class="link-list">
+            <li>
+              <a href="https://talosintelligence.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-talos.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Cisco Talos Intelligence</strong><span>Threat research, reputation lookups, and vulnerability information.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.shodan.io/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="feed-shodan.jpg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Shodan</strong><span>Search engine for internet-connected devices and exposed services.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://gchq.github.io/CyberChef/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-cyberchef.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CyberChef</strong><span>Browser-based recipes for decoding, parsing, and transforming data.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://mxtoolbox.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-mxtoolbox.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>MXToolbox</strong><span>DNS, MX, blacklist, and email delivery diagnostics.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://hackertarget.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-hackertarget.jpg" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>HackerTarget</strong><span>Online network discovery and diagnostic tools; use only on authorized targets.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ssllabs.com/ssltest/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-qualys-ssl-labs.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Qualys SSL Labs</strong><span>Analyze the TLS configuration of a server you are authorized to assess.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.checktls.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-checktls.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>CheckTLS</strong><span>Test email transport encryption and mail-server TLS configuration.</span></span>
+              </a>
+            </li>
+          </ul>
+          <ul class="link-list">
+            <li>
+              <a href="https://www.dmarcanalyzer.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-dmarc-analyzer.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>DMARC Analyzer</strong><span>Tools and guidance for SPF, DKIM, and DMARC deployments.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://ipinfo.io/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-ipinfo.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>IPinfo</strong><span>IP address, ASN, geolocation, and network intelligence.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ipqualityscore.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-ipqualityscore.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>IPQualityScore</strong><span>IP reputation, proxy, and fraud-risk checks.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wazuh.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-wazuh.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Wazuh</strong><span>Open-source security platform for SIEM, endpoint monitoring, and XDR.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tenable.com/products/nessus" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-tenable-nessus.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>Nessus</strong><span>Vulnerability assessment software from Tenable.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.sans.org/tools/sift-workstation/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="reference-sans.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>SIFT Workstation</strong><span>Free SANS toolkit for digital forensics and incident response.</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.kitploit.com/" target="_blank" rel="noopener">
+                <img class="resource-logo" src="tool-kploit.png" alt="" loading="lazy" decoding="async">
+                <span class="resource-copy"><strong>KitPloit</strong><span>Directory of open-source security and penetration-testing tools; verify tools before use.</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philadelphia Cybersecurity Groups -->
+    <section id="philly-groups" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">08 — Philadelphia Community</span>
+          <h2>Cybersecurity Groups Near Philly</h2>
+          <p>Meet local practitioners, share knowledge, and find chapter events across Greater Philadelphia and the Delaware Valley.</p>
+        </div>
+        <div class="card-grid local-card-grid">
+          <a href="https://isc2philly.com/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="isc2-philadelphia.png" alt="ISC2 Chapter Philadelphia" loading="lazy" decoding="async">
+              <span class="badge">Certifications</span>
+            </div>
+            <h3>ISC2 Philadelphia</h3>
+            <p>Connect with local security professionals and explore chapter learning, networking, and certification-community events.</p>
+            <span class="card-link">Find a chapter →</span>
+          </a>
+          <a href="https://engage.isaca.org/philadelphiachapter/home" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="isaca-philadelphia.png" alt="ISACA Philadelphia Chapter" loading="lazy" decoding="async">
+              <span class="badge">Audit & Governance</span>
+            </div>
+            <h3>ISACA Philadelphia</h3>
+            <p>Local community for information systems audit, risk, governance, assurance, and cybersecurity professionals.</p>
+            <span class="card-link">Visit the chapter →</span>
+          </a>
+          <a href="https://philadelphiainfragard.org/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="infragard-philadelphia.png" alt="InfraGard Philadelphia Members Alliance" loading="lazy" decoding="async">
+              <span class="badge">Public-Private</span>
+            </div>
+            <h3>InfraGard Philadelphia</h3>
+            <p>FBI-led public-private partnership connecting vetted members who help protect critical infrastructure.</p>
+            <span class="card-link">Learn about membership →</span>
+          </a>
+          <a href="https://owasp.org/chapters/philadelphia" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="owasp-philadelphia.png" alt="OWASP" loading="lazy" decoding="async">
+              <span class="badge">Application Security</span>
+            </div>
+            <h3>OWASP Philadelphia</h3>
+            <p>Open community for builders and defenders interested in web application security, learning, and local meetups.</p>
+            <span class="card-link">Visit the chapter →</span>
+          </a>
+          <a href="https://issa-dv.org/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="issa-delaware-valley.png" alt="ISSA Delaware Valley" loading="lazy" decoding="async">
+              <span class="badge">Delaware Valley</span>
+            </div>
+            <h3>ISSA Delaware Valley</h3>
+            <p>Regional information security association serving Southeastern Pennsylvania and the wider Delaware Valley.</p>
+            <span class="card-link">Meet the community →</span>
+          </a>
+          <a href="https://www.lv-aitp.org/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="aitp-lehigh-valley.png" alt="Lehigh Valley Chapter of AITP" loading="lazy" decoding="async">
+              <span class="badge">Lehigh Valley</span>
+            </div>
+            <h3>Lehigh Valley AITP</h3>
+            <p>Connect with Lehigh Valley information technology professionals through the local AITP chapter.</p>
+            <span class="card-link">Visit the chapter →</span>
+          </a>
+          <a href="https://newjersey.isc2chapters.isc2.org/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="cert-isc2.png" alt="ISC2" loading="lazy" decoding="async">
+              <span class="badge">New Jersey</span>
+            </div>
+            <h3>ISC2 New Jersey Chapter</h3>
+            <p>Regional ISC2 chapter serving New Jersey security professionals through community and member events.</p>
+            <span class="card-link">Visit the chapter →</span>
+          </a>
+          <a href="https://philadelphiasecuritycollaborative.com/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="community-philly-security.jpg" alt="Greater Philadelphia Regional Security Collaborative" loading="lazy" decoding="async">
+              <span class="badge">Regional Community</span>
+            </div>
+            <h3>Greater Philadelphia Regional Security Collaborative</h3>
+            <p>Regional collaboration for security practitioners and organizations across Greater Philadelphia.</p>
+            <span class="card-link">Visit the collaborative →</span>
+          </a>
+          <a href="https://www.evanta.com/ciso/philadelphia" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="community-evanta-philadelphia.png" alt="Evanta Philadelphia CISO Community" loading="lazy" decoding="async">
+              <span class="badge">CISO Peer Network</span>
+            </div>
+            <h3>Evanta Philadelphia CISO Community</h3>
+            <p>Peer network for Philadelphia-area CISOs to exchange perspectives on security leadership and emerging challenges.</p>
+            <span class="card-link">Explore the community →</span>
+          </a>
+          <a href="https://www.cisomeetphilly.org/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="community-cisomeet-philly.png" alt="CISOMeet Philadelphia" loading="lazy" decoding="async">
+              <span class="badge">CISO Community</span>
+            </div>
+            <h3>CISOMeet Philadelphia</h3>
+            <p>Local CISO community focused on collaboration, peer learning, and connecting security leaders.</p>
+            <span class="card-link">Meet the community →</span>
+          </a>
+          <a href="https://phillyciso.org/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="community-phillyciso.png" alt="PhillyCISO" loading="lazy" decoding="async">
+              <span class="badge">Executive Network</span>
+            </div>
+            <h3>PhillyCISO</h3>
+            <p>Member-led chapter bringing senior information security executives together through leadership programs and peer connections.</p>
+            <span class="card-link">Visit PhillyCISO →</span>
+          </a>
+          <a href="https://health-isac.org/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="community-health-isac.png" alt="Health-ISAC" loading="lazy" decoding="async">
+              <span class="badge">Healthcare Security</span>
+            </div>
+            <h3>Health-ISAC</h3>
+            <p>Member-driven health-sector community for sharing cyber and physical threat intelligence and strengthening resilience.</p>
+            <span class="card-link">Explore membership and resources →</span>
+          </a>
+          <a href="https://www.wicys.org/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="community-wicys.png" alt="Women in Cybersecurity (WiCyS)" loading="lazy" decoding="async">
+              <span class="badge">Professional Community</span>
+            </div>
+            <h3>Women in Cybersecurity (WiCyS)</h3>
+            <p>Professional and student community offering mentorship, development programs, events, and networking; includes a Delaware Valley affiliate.</p>
+            <span class="card-link">Explore WiCyS →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philadelphia Cybersecurity Conferences -->
+    <section id="philly-events" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">09 — Meet, Learn, Connect</span>
+          <h2>Cybersecurity Conferences Around Philadelphia</h2>
+          <p>Keep an eye on these community and industry event calendars for upcoming dates in Philly and the surrounding region.</p>
+        </div>
+        <div class="card-grid local-card-grid">
+          <a href="https://bsidesphilly.org/" target="_blank" rel="noopener" class="card local-card featured">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="bsides-philly.png" alt="BSides Philadelphia" loading="lazy" decoding="async">
+              <span class="badge">Community-led</span>
+            </div>
+            <h3>BSides Philly</h3>
+            <p>Volunteer-organized information security conference built by and for the local security community.</p>
+            <span class="card-link">See the next conference →</span>
+          </a>
+          <a href="https://www.secureworld.io/events" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="secureworld.png" alt="SecureWorld" loading="lazy" decoding="async">
+              <span class="badge">Regional Series</span>
+            </div>
+            <h3>SecureWorld</h3>
+            <p>Practitioner-focused regional security conferences; check the official calendar for Philadelphia-area dates.</p>
+            <span class="card-link">Browse event calendar →</span>
+          </a>
+          <a href="https://futureconevents.com/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="futurecon.png" alt="FutureCon cybersecurity conference" loading="lazy" decoding="async">
+              <span class="badge">City Conferences</span>
+            </div>
+            <h3>FutureCon</h3>
+            <p>City-based cybersecurity conferences featuring practitioner talks, panels, and vendor showcases; check for Philly dates.</p>
+            <span class="card-link">View upcoming events →</span>
+          </a>
+          <a href="https://www.guidepointsecurity.com/gpsec/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="gpsec.png" alt="GPSEC by GuidePoint Security" loading="lazy" decoding="async">
+              <span class="badge">Regional Meetups</span>
+            </div>
+            <h3>GPSEC & GuidePoint Events</h3>
+            <p>Look for GPSEC and GuidePoint Security gatherings, including Philadelphia-area cyber technology showcases.</p>
+            <span class="card-link">Explore GuidePoint Security →</span>
+          </a>
+          <a href="https://www.technosecurity.us/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="cert-techno-security.png" alt="Techno Security & Digital Forensics Conference" loading="lazy" decoding="async">
+              <span class="badge">Digital Forensics</span>
+            </div>
+            <h3>Techno Security & Digital Forensics Conference</h3>
+            <p>Conference for digital forensics, investigations, and cybersecurity professionals; check the organizer's calendar for dates and locations.</p>
+            <span class="card-link">View the conference →</span>
+          </a>
+          <a href="https://cisoexecnet.com/event/philadelphia-chapter-security-operations-executive-roundtable" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="community-ciso-exec.png" alt="CISO Executive Network" loading="lazy" decoding="async">
+              <span class="badge">Executive Roundtable</span>
+            </div>
+            <h3>CISO Executive Network: Philadelphia Roundtable</h3>
+            <p>Philadelphia discussion series on making security operations more effective and aligned with business needs; check the page for current event details.</p>
+            <span class="card-link">View roundtable details →</span>
+          </a>
+          <a href="https://www.wicys.org/event/wicys-delaware-valley-affiliate-philadelphia-official-cybersecurity-summit/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="event-wicys-philadelphia.jpg" alt="WiCyS at the Philadelphia Official Cybersecurity Summit" loading="lazy" decoding="async">
+              <span class="badge">Community Event</span>
+            </div>
+            <h3>WiCyS Delaware Valley at the Philadelphia Summit</h3>
+            <p>Event details for the WiCyS Delaware Valley affiliate's participation in the Philadelphia Official Cybersecurity Summit.</p>
+            <span class="card-link">View WiCyS event details →</span>
+          </a>
+          <a href="https://cybersecuritysummit.com/summit/philadelphia-3/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="event-cybersecurity-summit-philadelphia.png" alt="Official Cybersecurity Summit Philadelphia" loading="lazy" decoding="async">
+              <span class="badge">Philadelphia Event</span>
+            </div>
+            <h3>Official Cybersecurity Summit — Philadelphia</h3>
+            <p>Philadelphia edition of the executive-focused cybersecurity summit; check the event page for current program and registration information.</p>
+            <span class="card-link">View the Philadelphia summit →</span>
+          </a>
+          <a href="https://cybersecuritysummit.com/" target="_blank" rel="noopener" class="card local-card">
+            <div class="card-top local-logo-card-top">
+              <img class="local-org-logo" src="event-cybersecurity-summit.png" alt="The Official Cybersecurity Summit" loading="lazy" decoding="async">
+              <span class="badge">Event Series</span>
+            </div>
+            <h3>The Official Cybersecurity Summit</h3>
+            <p>Organizer's main site with event information and editions in Philadelphia and other cities.</p>
+            <span class="card-link">Browse the summit series →</span>
+          </a>
+        </div>
+        <p class="local-events-note">Event locations and schedules change from year to year. Confirm dates, venues, and registration details with each organizer before making plans.</p>
       </div>
     </section>
 
@@ -612,11 +1806,13 @@
         <span class="logo-icon">🛡️</span>
         <span>CyberPro Hub</span>
       </div>
-      <p>Curated for seasoned cybersecurity professionals. Host on Cloudflare Pages free tier.</p>
+      <p>Curated for seasoned cybersecurity professionals.</p>
       <p class="footer-meta">Built as a static site · No trackers · Open for personalization</p>
+      <time class="revision-date" datetime="2026-10-16" aria-label="Revision date">10/16/26</time>
     </div>
   </footer>
 
+  <a href="#me" class="back-to-top" id="backToTop" aria-label="Back to top" hidden>↑</a>
   <script src="script.js"></script>
 </body>
 </html>

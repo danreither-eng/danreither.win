@@ -1,0 +1,10 @@
+name = "intel-feed"
+main = "index.js"
+compatibility_date = "2025-01-01"
+
+[[kv_namespaces]]
+binding = "INTEL_FEED"
+id = "f167d89c84044876853ae6e9bf696c5b"
+
+[triggers]
+crons = ["0 12 * * *"]

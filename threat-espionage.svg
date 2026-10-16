@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="30" y1="0" x2="440" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10233F"/>
+      <stop offset="1" stop-color="#183C66"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="120" y1="55" x2="360" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="240" rx="18" fill="url(#bg)"/>
+  <path d="M90 160 160 98l78 54 82-76 70 54M118 194l74-40 73 37 95-62" stroke="#5B789C" stroke-width="3"/>
+  <g fill="#172E4D" stroke="#70D5FF" stroke-width="3">
+    <circle cx="90" cy="160" r="10"/><circle cx="160" cy="98" r="10"/>
+    <circle cx="238" cy="152" r="10"/><circle cx="320" cy="76" r="10"/>
+    <circle cx="390" cy="130" r="10"/><circle cx="118" cy="194" r="8"/>
+    <circle cx="192" cy="154" r="8"/><circle cx="265" cy="191" r="8"/>
+    <circle cx="360" cy="129" r="8"/>
+  </g>
+  <path d="M175 119c18-22 42-34 65-34s47 12 65 34c-18 22-42 34-65 34s-47-12-65-34Z" fill="#10233F" stroke="url(#glow)" stroke-width="4"/>
+  <circle cx="240" cy="119" r="14" fill="#38BDF8"/>
+  <circle cx="240" cy="119" r="6" fill="#E0F2FE"/>
+</svg>
