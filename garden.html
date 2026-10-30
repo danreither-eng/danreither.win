@@ -100,6 +100,7 @@
 <div class="garden-tabs" id="tabs">
 <button class="btn btn-primary" type="button" data-view="all">All crops</button><button class="btn btn-secondary" type="button" data-view="perennial">Permanent</button><button class="btn btn-secondary" type="button" data-view="annual">Annual vegetables</button><button class="btn btn-secondary" type="button" data-view="herb">Herbs</button>
 </div>
+<div class="crop-tabs" id="cropTabs" role="tablist" aria-label="Pick a crop"></div>
 <p class="garden-count" id="count"></p>
 <div class="garden-grid" id="plants"></div>
 </div>
@@ -172,7 +173,7 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const store = { get: k => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} }, del: k => { try { localStorage.removeItem(k); } catch (e) {} } };
 const loadCustom = () => { try { return JSON.parse(store.get('garden-custom-crops') || '[]'); } catch (e) { return []; } };
-let view = 'all';
+let view = 'all', sel = null;
 const typeLabel = c => c.cat === 'perennial' ? 'Permanent planting' : c.cat === 'herb' ? 'Herb' : 'Annual vegetable';
 const seasonLabel = c => c.season === 'spring' ? 'Spring planting' : c.season === 'fall' ? 'Fall planting' : 'Warm-season planting';
 const MN = ['J','F','M','A','M','J','J','A','S','O','N','D'];
@@ -193,7 +194,10 @@ ${row('&#x1F331;', 'When to plant', c.plant)}${row('&#x1F9FA;', 'When to harvest
 function render() {
   const all = baseCrops.concat(loadCustom().map(c => Object.assign({ custom: true }, c)));
   const q = $('search').value.toLowerCase(), season = $('season').value;
-  const list = all.filter(c => (view === 'all' || c.cat === view) && (season === 'all' || c.season === season) && JSON.stringify(c).toLowerCase().includes(q));
+  const base = all.filter(c => (view === 'all' || c.cat === view) && (season === 'all' || c.season === season) && JSON.stringify(c).toLowerCase().includes(q));
+  if (sel && !base.some(c => c.n === sel)) sel = null;
+  $('cropTabs').innerHTML = `<button type="button" role="tab" class="crop-tab${sel ? '' : ' on'}" data-crop="">All</button>` + base.map(c => `<button type="button" role="tab" class="crop-tab${sel === c.n ? ' on' : ''}" data-crop="${esc(c.n)}" aria-selected="${sel === c.n}">${c.img ? `<img src="${esc(c.img)}" alt="" loading="lazy">` : ''}<span>${esc(c.n)}</span></button>`).join('');
+  const list = sel ? base.filter(c => c.n === sel) : base;
   $('plants').innerHTML = list.length ? list.map(card).join('') : '<div class="garden-empty">No crops match that search. Try another word or filter.</div>';
   $('count').textContent = `Showing ${list.length} of ${all.length} crops`;
   document.querySelectorAll('.crop-note').forEach(el => {
@@ -206,10 +210,22 @@ $('search').addEventListener('input', render);
 $('season').addEventListener('change', render);
 $('tabs').addEventListener('click', e => {
   const b = e.target.closest('[data-view]'); if (!b) return;
-  view = b.dataset.view;
+  view = b.dataset.view; sel = null;
   document.querySelectorAll('#tabs [data-view]').forEach(x => x.className = 'btn ' + (x === b ? 'btn-primary' : 'btn-secondary'));
   $('listTitle').textContent = titles[view];
   render();
+});
+$('cropTabs').addEventListener('click', e => {
+  const b = e.target.closest('[data-crop]'); if (!b) return;
+  sel = b.dataset.crop || null;
+  render();
+  if (sel) $('plants').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+$('cropTabs').addEventListener('click', e => {
+  const b = e.target.closest('[data-crop]'); if (!b) return;
+  sel = b.dataset.crop || null;
+  render();
+  if (sel) $('plants').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 $('addForm').addEventListener('submit', e => {
   e.preventDefault();
