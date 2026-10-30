@@ -235,7 +235,7 @@ body {
   grid-template-columns: minmax(0, 1fr) 160px minmax(0, 1fr);
   align-items: center;
   gap: 0.85rem;
-  max-width: 760px;
+  max-width: 920px;
   margin: 0 auto 2rem;
 }
 
@@ -496,7 +496,7 @@ body {
 }
 
 .contact-copy strong {
-  overflow-wrap: anywhere;
+  white-space: nowrap;
   font-size: 0.92rem;
   font-weight: 650;
 }
@@ -1387,7 +1387,7 @@ section[id] {
 
   .contact-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 640px;
+    max-width: 760px;
     gap: 0.6rem;
   }
 
@@ -1420,10 +1420,10 @@ section[id] {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
   .contact-links {
     grid-template-columns: 1fr;
-    max-width: 320px;
+    max-width: 360px;
   }
 
   .contact-link:first-child,
@@ -1435,7 +1435,9 @@ section[id] {
   .contact-portrait {
     grid-row: 1;
   }
+}
 
+@media (max-width: 480px) {
   .card-grid {
     grid-template-columns: 1fr;
   }
