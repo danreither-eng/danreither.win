@@ -1513,18 +1513,13 @@ section[id] {
   margin-bottom: 1.5rem;
 }
 .contributor-avatar {
-  display: grid;
-  place-items: center;
+  display: block;
   flex: 0 0 104px;
   width: 104px;
   height: 104px;
   border: 1px solid var(--accent-bright);
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 25%, #60a5fa, #1d4ed8 55%, #111827);
-  color: white;
-  font-family: var(--mono);
-  font-size: 2rem;
-  font-weight: 700;
+  object-fit: cover;
   box-shadow: 0 0 24px var(--accent-glow);
 }
 .contributor-heading h2 {

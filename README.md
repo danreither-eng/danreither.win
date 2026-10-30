@@ -46,5 +46,5 @@ Deploy the feed Worker from `workers/intel-feed` with Wrangler. Keep the KV name
 ## Career Launchpad and community
 
 - Career Launchpad (career-resources.html) groups resources by role exploration, safe practice, frameworks, tools, labs, curated lists, and contribution opportunities.
-- Signal Boost (signal-boost.html) features community practitioners; Jon Taylor?s profile draws on his supplied resume and public LinkedIn profile.
+- Signal Boost (signal-boost.html) features community practitioners; Jonathan (Jon) Taylor's profile highlights his CISSP and CCSP credentials and draws on his supplied resume and public LinkedIn profile.
 - Personal contact details from the supplied resume are not published.
