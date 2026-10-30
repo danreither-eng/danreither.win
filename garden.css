@@ -1,0 +1,55 @@
+.garden-tools{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-bottom:1.2rem}
+.garden-tools input,.garden-tools select,.garden-form input,.garden-form select,.garden-form textarea,.crop-note,.garden-notes{font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:.6rem .8rem}
+.garden-tools input[type=search]{flex:1;min-width:220px}
+.garden-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.garden-count{color:var(--text-dim);font-size:.85rem;margin:0 0 1rem}
+.garden-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:1.3rem}
+.plant-card{padding:0;overflow:hidden}
+.plant-photo{position:relative;margin:0;height:200px;background:var(--surface-hover)}
+.plant-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.plant-photo figcaption,.plant-photo.nophoto{position:absolute;inset:auto 0 0 0;padding:2.2rem 1.1rem .8rem;background:linear-gradient(transparent,rgba(5,10,18,.88))}
+.plant-photo.nophoto{position:relative;background:var(--surface-hover);padding:1.4rem 1.1rem}
+.plant-photo h3{margin:.1rem 0 0;color:#fff}
+.plant-photo .plant-type{color:#9ad7a6}
+.plant-body{padding:1rem 1.1rem 1.1rem}
+.plant-desc{margin:0 0 .8rem;font-size:.9rem;color:var(--text-muted);line-height:1.5}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:.8rem}
+.stats div{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.5rem .6rem}
+.stats b{display:block;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim)}
+.stats span{font-size:.8rem;color:var(--text);line-height:1.3}
+.cal{display:grid;grid-template-columns:repeat(12,1fr);gap:3px}
+.cal span{text-align:center;font:500 .68rem 'JetBrains Mono',monospace;padding:.3rem 0;border-radius:4px;background:var(--bg-alt);color:var(--text-dim);border:1px solid var(--border)}
+.cal .p,.cal-key .p{background:#3f8f55;color:#fff;border-color:#3f8f55}
+.cal .h,.cal-key .h{background:#d69b43;color:#1a1204;border-color:#d69b43}
+.cal .ph{background:linear-gradient(135deg,#3f8f55 50%,#d69b43 50%);color:#fff;border-color:transparent}
+.cal-key{display:flex;gap:.5rem;align-items:center;font-size:.7rem;color:var(--text-dim);margin:.35rem 0 .8rem}
+.cal-key i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.spec{width:100%;border-collapse:collapse;font-size:.85rem;margin-bottom:.6rem}
+.spec th,.spec td{padding:.55rem .5rem;border-top:1px solid var(--border);vertical-align:top;text-align:left}
+.spec th{width:34%;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--accent-bright);white-space:nowrap}
+.spec th .ic{margin-right:.35rem}
+.spec tr:nth-child(even){background:rgba(255,255,255,.025)}
+.spec td{color:var(--text-muted);line-height:1.5}
+.credit{font-size:.7rem;color:var(--text-dim);margin:.7rem 0 0}
+.credit a{color:var(--text-dim);text-decoration:underline}
+@media(max-width:480px){.garden-grid{grid-template-columns:1fr}.spec th{white-space:normal}}
+.plant-card h3{margin:.2rem 0 .3rem}
+.plant-type{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-bright)}
+.plant-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.6rem 0 .4rem}
+.plant-tag{border:1px solid var(--border-light);border-radius:999px;padding:.15rem .6rem;font-size:.72rem;color:var(--text-muted)}
+.fact{padding:.55rem 0;border-top:1px solid var(--border)}
+.fact b{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-dim);margin-bottom:.15rem}
+.fact span{font-size:.88rem;color:var(--text-muted);line-height:1.5}
+.plant-card details{border-top:1px solid var(--border);padding-top:.6rem;margin-top:.3rem}
+.plant-card summary{cursor:pointer;color:var(--accent-bright);font-weight:600;font-size:.88rem}
+.crop-note,.garden-notes{width:100%;min-height:80px;margin-top:.6rem;resize:vertical;font-size:.88rem}
+.months{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}
+.month strong{display:block;color:var(--accent-bright);margin-bottom:.3rem}
+.month small{color:var(--text-muted);font-size:.82rem;line-height:1.45}
+.garden-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem}
+.garden-form textarea{min-height:60px;grid-column:1/-1}
+.garden-form label{display:flex;flex-direction:column;gap:.25rem;font-size:.75rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em}
+.garden-form .full{grid-column:1/-1}
+.garden-empty{padding:1.5rem;text-align:center;color:var(--text-dim)}
+.garden-note{font-size:.82rem;color:var(--text-dim)}
+@media print{.garden-tools,.garden-tabs,.site-header,.garden-form-section,.theme-toggle{display:none!important}}
