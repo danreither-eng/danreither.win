@@ -139,6 +139,7 @@ body {
 }
 
 .garden-link{display:flex;align-items:center;flex:0 0 auto;border-radius:8px;transition:transform .15s}
+.header-inner .main-nav{flex:1 1 auto;min-width:0;flex-wrap:wrap;justify-content:center;gap:.25rem 1rem}
 .garden-link:hover{transform:scale(1.1)}
 .garden-link img{display:block;height:36px;width:auto}
 
