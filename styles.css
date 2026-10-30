@@ -1662,3 +1662,69 @@ section[id] {
 .main-nav a[aria-current="page"] {
   color: var(--accent-bright);
 }
+
+.bottle-fig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0 0 0.9rem;
+  padding: 0.8rem 0.6rem 0.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: radial-gradient(ellipse at 50% 35%, color-mix(in srgb, var(--accent-bright) 12%, var(--surface)), var(--surface));
+}
+
+.bottle-fig img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.bottle-fig figcaption {
+  color: var(--text-dim);
+  font-size: 0.65rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.bottle-fig figcaption a {
+  color: var(--accent-bright);
+}
+
+.bottle-fig-empty {
+  min-height: 275px;
+}
+
+.whisky-card .bottle-fig {
+  margin-top: 1.9rem;
+}
+
+.bottle-ph {
+  width: 70px;
+  height: 160px;
+  color: var(--text-dim);
+  opacity: 0.6;
+}
+
+.contact-portrait-link {
+  display: block;
+  align-self: center;
+  justify-self: center;
+  line-height: 0;
+  border-radius: var(--radius-sm);
+}
+
+.contact-portrait-link:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .contact-portrait-link {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+}
