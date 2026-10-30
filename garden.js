@@ -26,7 +26,7 @@ function render() {
   const q = $('search').value.toLowerCase(), season = $('season').value;
   const base = all.filter(c => (view === 'all' || c.cat === view) && (season === 'all' || c.season === season) && JSON.stringify(c).toLowerCase().includes(q));
   if (sel && !base.some(c => c.n === sel)) sel = null;
-  $('cropTabs').innerHTML = `<button type="button" role="tab" class="crop-tab${sel ? '' : ' on'}" data-crop="">All</button>` + base.map(c => `<button type="button" role="tab" class="crop-tab${sel === c.n ? ' on' : ''}" data-crop="${esc(c.n)}" aria-selected="${sel === c.n}">${c.img ? `<img src="${esc(c.img)}" alt="" loading="lazy">` : ''}<span>${esc(c.n)}</span></button>`).join('');
+  $('cropTabs').innerHTML = `<button type="button" role="tab" class="crop-tab${sel ? '' : ' on'}" data-crop="" title="All crops" aria-label="All crops">&#x1F33F;</button>` + base.map(c => `<button type="button" role="tab" class="crop-tab${sel === c.n ? ' on' : ''}" data-crop="${esc(c.n)}" title="${esc(c.n)}" aria-label="${esc(c.n)}" aria-selected="${sel === c.n}">${c.img ? `<img src="${esc(c.img)}" alt="" loading="lazy">` : ''}${c.img ? "" : esc(c.n)}</button>`).join('');
   const list = sel ? base.filter(c => c.n === sel) : base;
   $('plants').innerHTML = list.length ? list.map(card).join('') : '<div class="garden-empty">No crops match that search. Try another word or filter.</div>';
   $('count').textContent = `Showing ${list.length} of ${all.length} crops`;
