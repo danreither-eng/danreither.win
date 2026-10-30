@@ -232,7 +232,8 @@ body {
 
 .contact-links {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 160px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 332px) 160px minmax(0, 332px);
+  justify-content: center;
   align-items: center;
   gap: 0.85rem;
   max-width: 920px;
@@ -240,14 +241,15 @@ body {
 }
 
 .contact-link {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   min-width: 0;
   min-height: 84px;
   gap: 0.75rem;
-  padding: 1rem 1.15rem;
+  padding: 1rem 1.6rem 1rem 1rem;
   border: 1px solid color-mix(in srgb, var(--accent-bright) 65%, var(--border-light));
   border-radius: var(--radius-sm);
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 26%, var(--surface)), color-mix(in srgb, var(--accent-bright) 14%, var(--surface)));
@@ -502,10 +504,11 @@ body {
 }
 
 .contact-arrow {
-  align-self: flex-start;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
   color: var(--accent-bright);
   font-size: 0.9rem;
-  margin-left: 0.1rem;
 }
 
 .hero-actions {
@@ -1610,4 +1613,52 @@ section[id] {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+}
+
+.whisky-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.whisky-rank {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  color: var(--accent-bright);
+  opacity: 0.55;
+  font-family: var(--mono);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.whisky-meta {
+  color: var(--accent-bright);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.whisky-best {
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.whisky-card .card-link {
+  margin-top: auto;
+}
+
+.whisky-list {
+  display: grid;
+  gap: 0.6rem;
+  padding-left: 1.2rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.main-nav a[aria-current="page"] {
+  color: var(--accent-bright);
 }
