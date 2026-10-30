@@ -22,7 +22,7 @@ Curated sections:
 
 ## Deploy to Cloudflare Workers (Static Assets)
 
-This GitHub repository is the source of truth: make and commit site updates here first. When you are ready to publish, deploy the repository root—including `_headers`, `.well-known/security.txt`, both HTML pages, styles, scripts, and referenced image assets—to the existing Worker static-assets deployment. Cloudflare Workers applies the custom security headers in `_headers`.
+This GitHub repository is the source of truth: make and commit site updates here first. When you are ready to publish, deploy the repository root—including `_headers`, `.well-known/security.txt`, all HTML pages, styles, scripts, and referenced image assets—to the existing Worker static-assets deployment. Cloudflare Workers applies the custom security headers in `_headers`.
 
 No build step is required. Keep `_headers` in the static asset root and `.well-known/security.txt` at its exact path.
 
@@ -43,3 +43,8 @@ Built as a static resource hub and threat guide — no trackers or backend. SPF,
 `workers/intel-feed/index.js` refreshes the Daily Intel Board from public RSS feeds and the CTI Watch and CyberNetSec publication pages. A Cloudflare Cron Trigger runs the refresh daily at 12:00 UTC and stores the latest items in the `INTEL_FEED` KV namespace. The frontend falls back to its curated source links when a publisher has no usable public feed.
 
 Deploy the feed Worker from `workers/intel-feed` with Wrangler. Keep the KV namespace binding and the daily cron trigger configured for the `intel-feed` Worker. The static site links to that Worker through the CSP `connect-src` allowlist in `_headers`.
+## Career Launchpad and community
+
+- Career Launchpad (career-resources.html) groups resources by role exploration, safe practice, frameworks, tools, labs, curated lists, and contribution opportunities.
+- Signal Boost (signal-boost.html) features community practitioners; Jon Taylor?s profile draws on his supplied resume and public LinkedIn profile.
+- Personal contact details from the supplied resume are not published.
