@@ -138,6 +138,10 @@ body {
   color: var(--accent-bright);
 }
 
+.garden-link{display:flex;align-items:center;flex:0 0 auto;border-radius:8px;transition:transform .15s}
+.garden-link:hover{transform:scale(1.1)}
+.garden-link img{display:block;height:36px;width:auto}
+
 .theme-toggle {
   background: var(--surface);
   border: 1px solid var(--border);
