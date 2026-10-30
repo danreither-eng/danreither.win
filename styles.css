@@ -1659,6 +1659,28 @@ section[id] {
   font-size: 0.9rem;
 }
 
+.whisky-list.flight-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.flight-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.flight-list img {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 84px;
+  object-fit: contain;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  padding: 2px;
+}
+
 .main-nav a[aria-current="page"] {
   color: var(--accent-bright);
 }
