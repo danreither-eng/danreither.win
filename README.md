@@ -28,6 +28,7 @@ No build step is required. Keep `_headers` in the static asset root and `.well-k
 
 ## Customize
 
+- `students-start-here.html` offers a beginner pathway, linked from the homepage's Students Start Here box and the Career Launchpad. Keep introductory links and free-access claims current.
 - Explore `ai-resources.html` and `security-essentials.html` for the AI and security directories. The `homelab.html`, `coffee.html`, `edc.html`, `bbq.html`, and `heritage.html` pages expand the personal guides; all are linked from the homepage's More field guides section.
 - The garden's planting timeline is generated from the same month arrays as the crop cards in `garden.js`. Custom crops have text notes but no month arrays, so their timeline shows no recorded windows.
 - Edit `index.html` to add/remove links or change copy.

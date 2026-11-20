@@ -1468,6 +1468,34 @@ section[id] {
 
 
 /* Career Launchpad and community contributor pages */
+.student-start {
+  border-color: var(--border-light);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+.student-start-intro h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin: 0.4rem 0;
+}
+.student-start-intro p {
+  max-width: 760px;
+  color: var(--text-muted);
+}
+.student-start-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1rem 2rem;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+  color: var(--text-muted);
+}
+.student-start-steps li { padding-left: 0.2rem; }
+.student-start-steps strong { color: var(--text); }
+.student-start-steps a,
+.student-guide .pathway-group p a,
+.student-credit a { color: var(--accent-bright); }
+[data-theme="light"] .student-start-steps a,
+[data-theme="light"] .student-guide .pathway-group p a,
+[data-theme="light"] .student-credit a { color: #1d4ed8; }
+.student-credit { color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem; }
 .pathway-index {
   display: flex;
   flex-wrap: wrap;
