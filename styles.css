@@ -1496,6 +1496,10 @@ section[id] {
 [data-theme="light"] .student-guide .pathway-group p a,
 [data-theme="light"] .student-credit a { color: #1d4ed8; }
 .student-credit { color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem; }
+.shelf-image-credits .pathway-group ul { padding-left: 1.5rem; }
+.shelf-image-credits .pathway-group li { margin-bottom: 0.5rem; }
+.shelf-image-credits .pathway-group a { color: var(--accent-bright); }
+[data-theme="light"] .shelf-image-credits .pathway-group a { color: #1d4ed8; }
 .pathway-index {
   display: flex;
   flex-wrap: wrap;
@@ -1572,6 +1576,9 @@ section[id] {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.homepage-personal-link {
+  margin-bottom: 2rem;
 }
 .contributor-profile {
   max-width: 920px;
