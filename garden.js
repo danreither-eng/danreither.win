@@ -23,6 +23,7 @@ ${row('&#x1F331;', 'When to plant', c.plant)}${row('&#x1F9FA;', 'When to harvest
 }
 function render() {
   const all = baseCrops.concat(loadCustom().map(c => Object.assign({ custom: true }, c)));
+  renderChart(all);
   const q = $('search').value.toLowerCase(), season = $('season').value;
   const base = all.filter(c => (view === 'all' || c.cat === view) && (season === 'all' || c.season === season) && JSON.stringify(c).toLowerCase().includes(q));
   if (sel && !base.some(c => c.n === sel)) sel = null;
@@ -34,6 +35,24 @@ function render() {
     el.value = store.get('garden-crop-' + el.dataset.key) || '';
     el.addEventListener('input', () => store.set('garden-crop-' + el.dataset.key, el.value));
   });
+}
+function renderChart(crops) {
+  const sections = [['perennial', 'Permanent plantings'], ['annual', 'Annual vegetables'], ['herb', 'Herbs']];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  $('gardenChartBody').innerHTML = sections.map(([category, label]) => {
+    const items = crops.filter(c => c.cat === category).sort((a, b) => a.n.localeCompare(b.n));
+    if (!items.length) return '';
+    return `<tr class="garden-chart-group"><th scope="rowgroup" colspan="13">${esc(label)}</th></tr>` + items.map(c => {
+      const cells = months.map((month, i) => {
+        const plant = (c.pm || []).includes(i + 1), harvest = (c.hm || []).includes(i + 1);
+        const state = plant && harvest ? 'both' : plant ? 'plant' : harvest ? 'harvest' : '';
+        const text = plant && harvest ? 'P/H' : plant ? 'P' : harvest ? 'H' : '—';
+        const meaning = plant && harvest ? 'plant and harvest' : plant ? 'plant' : harvest ? 'harvest' : 'no window recorded';
+        return `<td${state ? ` class="garden-chart-${state}"` : ''} aria-label="${month}: ${meaning}">${text}</td>`;
+      }).join('');
+      return `<tr><th scope="row">${esc(c.n)}</th>${cells}</tr>`;
+    }).join('');
+  }).join('');
 }
 const titles = { all: 'Your growing guide', perennial: 'Permanent plantings', annual: 'Annual vegetables', herb: 'Herb collection' };
 $('search').addEventListener('input', render);

@@ -58,4 +58,17 @@
 .garden-form .full{grid-column:1/-1}
 .garden-empty{padding:1.5rem;text-align:center;color:var(--text-dim)}
 .garden-note{font-size:.82rem;color:var(--text-dim)}
+.garden-chart-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-sm)}
+.garden-chart{width:100%;min-width:800px;border-collapse:collapse;font-size:.8rem;background:var(--surface)}
+.garden-chart caption{text-align:left;padding:.8rem 1rem;color:var(--text-muted)}
+.garden-chart th,.garden-chart td{padding:.5rem .3rem;border:1px solid var(--border);text-align:center}
+.garden-chart thead th{color:var(--text-muted);font-size:.72rem}
+.garden-chart tbody th[scope=row]{text-align:left;min-width:160px;padding-left:1rem}
+.garden-chart .garden-chart-group th{text-align:left;padding:.6rem 1rem;color:var(--accent-bright);background:var(--bg-alt)}
+.garden-chart td{color:var(--text-dim)}
+.garden-chart .garden-chart-plant,.garden-chart-legend .garden-chart-plant{background:#3f8f55;color:#fff}
+.garden-chart .garden-chart-harvest,.garden-chart-legend .garden-chart-harvest{background:#d69b43;color:#1a1204}
+.garden-chart .garden-chart-both,.garden-chart-legend .garden-chart-both{background:linear-gradient(135deg,#3f8f55 50%,#d69b43 50%);color:#fff}
+.garden-chart-legend{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;color:var(--text-muted);font-size:.8rem;margin-bottom:1rem}
+.garden-chart-legend b{display:inline-block;padding:.2rem .4rem;border-radius:4px}
 @media print{.garden-tools,.garden-tabs,.site-header,.garden-form-section,.theme-toggle{display:none!important}}

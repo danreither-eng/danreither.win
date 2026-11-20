@@ -28,6 +28,8 @@ No build step is required. Keep `_headers` in the static asset root and `.well-k
 
 ## Customize
 
+- Explore `ai-resources.html` and `security-essentials.html` for the AI and security directories. The `homelab.html`, `coffee.html`, `edc.html`, `bbq.html`, and `heritage.html` pages expand the personal guides; all are linked from the homepage's More field guides section.
+- The garden's planting timeline is generated from the same month arrays as the crop cards in `garden.js`. Custom crops have text notes but no month arrays, so their timeline shows no recorded windows.
 - Edit `index.html` to add/remove links or change copy.
 - Update the homepage footer's revision date in `index.html` when publishing a new revision. This static site has no build-time version stamping.
 - Review the weekly picks, social profile links, and `security.txt` expiration when publishing. Update `Expires` in `security.txt` annually.

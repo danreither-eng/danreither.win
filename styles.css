@@ -1341,10 +1341,7 @@ section[id] {
   bottom: 0;
   left: 0;
   padding: 0.2rem 0.55rem;
-  border: 1px solid #bfdbfe;
-  border-radius: 999px;
-  background: #dbeafe;
-  color: #1e3a8a;
+  color: #243452;
   font-family: var(--mono);
   font-size: 0.68rem;
   font-weight: 600;

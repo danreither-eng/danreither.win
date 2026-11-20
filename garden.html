@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="A personal garden growing guide: what to plant, when to plant and harvest, feeding, spacing, and good neighbors."><title>My Garden | Personal Growing Guide</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F331;</text></svg>">
-<link rel="stylesheet" href="garden.css?v=4">
+<link rel="stylesheet" href="garden.css?v=5">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -16,7 +16,7 @@
 <div class="hero-badge">A personal growing journal</div>
 <h1>My <span class="gradient-text">Garden.</span></h1>
 <p class="hero-sub">A practical home reference for what to plant, when to plant and harvest, how long each crop takes, how to feed it, and what to grow beside it. Built around the Lehigh Valley season, with room for your own notes and your own crops.</p>
-<div class="pathway-footer-links"><a class="btn btn-primary" href="#guide">Open the growing guide &darr;</a><a class="btn btn-secondary" href="#add-crop">Add your own crop</a></div>
+<div class="pathway-footer-links"><a class="btn btn-primary" href="#guide">Open the growing guide &darr;</a><a class="btn btn-secondary" href="#planting-chart">Planting chart</a><a class="btn btn-secondary" href="#add-crop">Add your own crop</a></div>
 </div>
 </section>
 
@@ -61,6 +61,18 @@
 <article class="card month"><strong>Jul&ndash;Aug</strong><small>Harvest summer crops; start fall brassicas; keep watering steady.</small></article>
 <article class="card month"><strong>Sep&ndash;Oct</strong><small>Harvest fall crops; plant garlic in mid to late October; mulch beds.</small></article>
 </div>
+</div>
+</section>
+
+<section class="section section-alt" id="planting-chart">
+<div class="container">
+<div class="section-header"><span class="section-tag">Year at a glance</span><h2>Planting and harvest timeline</h2>
+<p>Approximate monthly windows for the Lehigh Valley. Timing varies by weather, variety, and whether you start seeds indoors or transplant outdoors; check each crop's detailed notes. Scroll the chart sideways on smaller screens.</p></div>
+<p class="garden-chart-legend"><span><b class="garden-chart-plant">P</b> Plant</span><span><b class="garden-chart-harvest">H</b> Harvest</span><span><b class="garden-chart-both">P/H</b> Both</span><span>&mdash; No window recorded</span></p>
+<div class="garden-chart-scroll" role="region" aria-label="Planting and harvest timeline, scroll horizontally" tabindex="0">
+<table class="garden-chart" id="gardenChart"><caption>Planting and harvest months by crop</caption><thead><tr><th scope="col">Crop</th><th scope="col">Jan</th><th scope="col">Feb</th><th scope="col">Mar</th><th scope="col">Apr</th><th scope="col">May</th><th scope="col">Jun</th><th scope="col">Jul</th><th scope="col">Aug</th><th scope="col">Sep</th><th scope="col">Oct</th><th scope="col">Nov</th><th scope="col">Dec</th></tr></thead><tbody id="gardenChartBody"></tbody></table>
+</div>
+<p class="garden-note">Custom crops appear below their group. Their month-by-month schedule is not recorded by the add-crop form; refer to the planting and harvest notes you entered.</p>
 </div>
 </section>
 
@@ -111,6 +123,6 @@
 </div>
 </footer>
 <script src="script.js"></script>
-<script src="garden.js?v=3"></script>
+<script src="garden.js?v=5"></script>
 </body>
 </html>
