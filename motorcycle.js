@@ -2,7 +2,6 @@ const bikePhotoDialog = document.querySelector('.bike-photo-dialog');
 
 if (bikePhotoDialog && typeof bikePhotoDialog.showModal === 'function') {
   const enlargedPhoto = bikePhotoDialog.querySelector('img');
-  const caption = bikePhotoDialog.querySelector('#bike-photo-caption');
 
   document.querySelectorAll('.bike-gallery a').forEach((link) => {
     link.addEventListener('click', (event) => {
@@ -11,7 +10,6 @@ if (bikePhotoDialog && typeof bikePhotoDialog.showModal === 'function') {
       const photo = link.querySelector('img');
       enlargedPhoto.src = link.href;
       enlargedPhoto.alt = photo.alt;
-      caption.textContent = photo.alt;
       bikePhotoDialog.showModal();
     });
   });
