@@ -30,7 +30,7 @@ No build step is required. Keep `_headers` in the static asset root and `.well-k
 
 - `students-start-here.html` offers a beginner pathway, linked from the homepage's Students Start Here box and the Career Launchpad. Keep introductory links and free-access claims current.
 - `reserve-shelf-image-credits.html` records third-party image attribution and licenses; update it whenever a credited Reserve Shelf image changes.
-- Explore `ai-resources.html`, `security-essentials.html`, and `homelab.html` from the homepage's More field guides section. `beyond-the-screen.html` brings together the garden, Reserve Shelf, coffee, everyday carry, BBQ, and heritage goods guides.
+- Explore `ai-resources.html`, `security-essentials.html`, and `homelab.html` from the homepage's More field guides section. `beyond-the-screen.html` brings together the garden, Reserve Shelf, motorcycles, coffee, everyday carry, BBQ, and heritage goods guides.
 - The garden's planting timeline is generated from the same month arrays as the crop cards in `garden.js`. Custom crops have text notes but no month arrays, so their timeline shows no recorded windows.
 - Edit `index.html` to add/remove links or change copy.
 - Update the homepage footer's revision date in `index.html` when publishing a new revision. This static site has no build-time version stamping.

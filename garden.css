@@ -6,10 +6,12 @@
 .garden-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:1.3rem}
 .plant-card{padding:0;overflow:hidden}
 .crop-tabs{display:flex;gap:.6rem;flex-wrap:wrap;padding:.2rem .1rem .8rem;margin-bottom:.6rem}
-.crop-tab{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:64px;min-width:64px;max-width:64px;height:64px;font:600 .75rem Inter,sans-serif;color:var(--text-muted);background:var(--surface);border:2px solid var(--border-light);border-radius:50%;padding:0;cursor:pointer;overflow:hidden;font-size:1.5rem}
+.crop-tab{flex:0 0 96px;display:flex;flex-direction:column;align-items:center;gap:.35rem;font:600 .75rem Inter,sans-serif;line-height:1.2;color:var(--text-muted);background:transparent;border:0;padding:0;cursor:pointer;text-align:center}
+.crop-tab-image{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border:2px solid var(--border-light);border-radius:50%;overflow:hidden;background:var(--surface);font-size:1.5rem}
 .crop-tab img{width:100%;height:100%;object-fit:cover;display:block}
-.crop-tab:hover{border-color:var(--accent-bright);transform:scale(1.06)}
-.crop-tab.on{border-color:#3f8f55;box-shadow:0 0 0 3px rgba(63,143,85,.45)}
+.crop-tab:hover .crop-tab-image,.crop-tab:focus-visible .crop-tab-image{border-color:var(--accent-bright)}
+.crop-tab.on .crop-tab-image{border-color:#3f8f55;box-shadow:0 0 0 3px rgba(63,143,85,.45)}
+.crop-tab.on{color:var(--text)}
 .garden-grid:has(.plant-card:only-child){grid-template-columns:minmax(0,640px)}
 .plant-photo{position:relative;margin:0;height:200px;background:var(--surface-hover)}
 .plant-photo img{width:100%;height:100%;object-fit:cover;display:block}
@@ -71,4 +73,22 @@
 .garden-chart .garden-chart-both,.garden-chart-legend .garden-chart-both{background:linear-gradient(135deg,#3f8f55 50%,#d69b43 50%);color:#fff}
 .garden-chart-legend{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;color:var(--text-muted);font-size:.8rem;margin-bottom:1rem}
 .garden-chart-legend b{display:inline-block;padding:.2rem .4rem;border-radius:4px}
-@media print{.garden-tools,.garden-tabs,.site-header,.garden-form-section,.theme-toggle{display:none!important}}
+.garden-chart-print{margin-bottom:1rem}
+@media print{.garden-tools,.garden-tabs,.site-header,.garden-form-section,.theme-toggle,.garden-chart-print{display:none!important}}
+@media print{
+  body.print-chart .grid-bg,body.print-chart .site-header,body.print-chart footer,body.print-chart main>section:not(#planting-chart),body.print-chart .garden-chart-print{display:none!important}
+  body.print-chart,body.print-chart #planting-chart{background:#fff!important;color:#000!important}
+  body.print-chart #planting-chart{padding:0}
+  body.print-chart #planting-chart .container{max-width:none;width:100%;padding:0}
+  body.print-chart #planting-chart .section-header{margin-bottom:.5rem}
+  body.print-chart #planting-chart .section-header h2,body.print-chart #planting-chart .section-header p,body.print-chart .garden-note,body.print-chart .garden-chart-legend,body.print-chart .garden-chart caption,body.print-chart .garden-chart th,body.print-chart .garden-chart td{color:#000!important}
+  body.print-chart .garden-chart-scroll{overflow:visible;border:0}
+  body.print-chart .garden-chart{min-width:0;width:100%;table-layout:fixed;font-size:8pt;background:#fff}
+  body.print-chart .garden-chart th,body.print-chart .garden-chart td{border:1px solid #777;padding:.2rem .05rem;background:#fff!important}
+  body.print-chart .garden-chart-legend b{background:#fff!important;color:#000!important}
+  body.print-chart .garden-chart tbody th[scope=row]{min-width:0;padding-left:.2rem;overflow-wrap:anywhere}
+  body.print-chart .garden-chart th:first-child{width:24%}
+  body.print-chart .garden-chart thead th{font-size:7pt}
+  body.print-chart .garden-chart-group{break-after:avoid}
+  body.print-chart .garden-chart tr{break-inside:avoid}
+}

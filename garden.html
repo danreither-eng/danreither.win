@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="A personal garden growing guide: what to plant, when to plant and harvest, feeding, spacing, and good neighbors."><title>My Garden | Personal Growing Guide</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F331;</text></svg>">
-<link rel="stylesheet" href="garden.css?v=5">
+<link rel="stylesheet" href="garden.css?v=7">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -25,9 +25,9 @@
 <div class="section-header"><span class="section-tag">Local timing</span><h2>Frost dates and how to use this guide</h2>
 <p>Use roughly May 5 as the last spring frost and October 15 as the first fall frost near Easton, Pennsylvania. These are planning estimates, not guarantees; soil temperature, the forecast and your microclimate matter.</p></div>
 <div class="card-grid">
-<article class="card"><h3>Permanent plantings</h3><p>Jersey asparagus, strawberries and blueberries. Choose the site carefully, because these stay for years.</p></article>
-<article class="card"><h3>Annual vegetables</h3><p>San Marzano tomatoes, eggplant, pickling cucumbers, Brussels sprouts, broccoli, cauliflower, onions and garlic. Rotate beds every year.</p></article>
-<article class="card"><h3>Herbs</h3><p>Basil, parsley, dill, cilantro, thyme, oregano, rosemary, chives and sage. Many double as good garden neighbors.</p></article>
+<article class="card"><h3>Permanent plantings</h3><p>Jersey asparagus, strawberries, blueberries and comfrey. Choose the site carefully, because these stay for years.</p></article>
+<article class="card"><h3>Annual vegetables</h3><p>San Marzano tomatoes, eggplant, cucumbers, brassicas, onions, garlic, radishes and red beets. Rotate beds every year.</p></article>
+<article class="card"><h3>Herbs and flowers</h3><p>Basil, parsley, dill, thyme, oregano, rosemary, chives, sage and chamomile. Comfrey is a permanent planting; do not ingest it.</p></article>
 <article class="card"><h3>Your notes</h3><p>Every card has a notes box for variety, bed, planting date, yield and lessons. Notes are saved in this browser only.</p></article>
 </div>
 </div>
@@ -68,6 +68,7 @@
 <div class="container">
 <div class="section-header"><span class="section-tag">Year at a glance</span><h2>Planting and harvest timeline</h2>
 <p>Approximate monthly windows for the Lehigh Valley. Timing varies by weather, variety, and whether you start seeds indoors or transplant outdoors; check each crop's detailed notes. Scroll the chart sideways on smaller screens.</p></div>
+<button class="btn btn-secondary garden-chart-print" type="button" id="printChartBtn">Print planting and harvest chart</button>
 <p class="garden-chart-legend"><span><b class="garden-chart-plant">P</b> Plant</span><span><b class="garden-chart-harvest">H</b> Harvest</span><span><b class="garden-chart-both">P/H</b> Both</span><span>&mdash; No window recorded</span></p>
 <div class="garden-chart-scroll" role="region" aria-label="Planting and harvest timeline, scroll horizontally" tabindex="0">
 <table class="garden-chart" id="gardenChart"><caption>Planting and harvest months by crop</caption><thead><tr><th scope="col">Crop</th><th scope="col">Jan</th><th scope="col">Feb</th><th scope="col">Mar</th><th scope="col">Apr</th><th scope="col">May</th><th scope="col">Jun</th><th scope="col">Jul</th><th scope="col">Aug</th><th scope="col">Sep</th><th scope="col">Oct</th><th scope="col">Nov</th><th scope="col">Dec</th></tr></thead><tbody id="gardenChartBody"></tbody></table>
@@ -111,7 +112,7 @@
 <section class="section">
 <div class="container">
 <div class="section-header"><span class="section-tag">References</span><h2>Growing-guide references</h2></div>
-<p class="garden-note"><a href="https://extension.psu.edu/planting-and-growing-a-home-garden" target="_blank" rel="noopener noreferrer">Penn State Extension: Home gardening</a> &middot; <a href="https://extension.psu.edu/cool-season-vs-warm-season-vegetables" target="_blank" rel="noopener noreferrer">Cool vs. warm-season crops</a> &middot; <a href="https://extension.psu.edu/herbs-make-good-plant-partners-and-companions" target="_blank" rel="noopener noreferrer">Herb companions</a> &middot; <a href="https://extension.psu.edu/cole-crops-for-the-home-vegetable-garden" target="_blank" rel="noopener noreferrer">Cole crops</a> &middot; <a href="https://extension.psu.edu/growing-garlic-fall-planting" target="_blank" rel="noopener noreferrer">Garlic</a> &middot; <a href="https://extension.psu.edu/site-selection-and-preparation-for-home-blueberry-plantings" target="_blank" rel="noopener noreferrer">Blueberries</a> &middot; <a href="https://extension.psu.edu/growing-strawberries" target="_blank" rel="noopener noreferrer">Strawberries</a></p>
+<p class="garden-note"><a href="https://extension.psu.edu/planting-and-growing-a-home-garden" target="_blank" rel="noopener noreferrer">Penn State Extension: Home gardening</a> &middot; <a href="https://extension.psu.edu/cool-season-vs-warm-season-vegetables" target="_blank" rel="noopener noreferrer">Cool vs. warm-season crops</a> &middot; <a href="https://extension.psu.edu/herbs-make-good-plant-partners-and-companions" target="_blank" rel="noopener noreferrer">Herb companions</a> &middot; <a href="https://extension.psu.edu/cole-crops-for-the-home-vegetable-garden" target="_blank" rel="noopener noreferrer">Cole crops</a> &middot; <a href="https://extension.psu.edu/growing-garlic-fall-planting" target="_blank" rel="noopener noreferrer">Garlic</a> &middot; <a href="https://extension.psu.edu/site-selection-and-preparation-for-home-blueberry-plantings" target="_blank" rel="noopener noreferrer">Blueberries</a> &middot; <a href="https://extension.psu.edu/growing-strawberries" target="_blank" rel="noopener noreferrer">Strawberries</a> &middot; <a href="https://www.pubs.ext.vt.edu/426/426-422/426-422.html" target="_blank" rel="noopener noreferrer">Root crops</a> &middot; <a href="https://www.ncbi.nlm.nih.gov/books/NBK548370/" target="_blank" rel="noopener noreferrer">Comfrey safety</a></p>
 <p class="garden-note">Fertilizer guidance is a starting point, not a substitute for a soil test. Follow product labels and avoid routine high-nitrogen feeding. Companion-plant claims vary in evidence; the listed pairings emphasize practical spacing or Penn State-supported herb partnerships.</p>
 </div>
 </section>
@@ -123,6 +124,6 @@
 </div>
 </footer>
 <script src="script.js"></script>
-<script src="garden.js?v=5"></script>
+<script src="garden.js?v=8"></script>
 </body>
 </html>
