@@ -1,3 +1,10 @@
 .bike-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
 .bike-gallery figure{margin:0;overflow:hidden;padding:0}
 .bike-gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--bg-alt)}
+.motorcycle-card-photo{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:.55rem;background:var(--bg-alt)}
+.motorcycle-photo-caption{display:block;color:var(--text-muted);font-size:.72rem;line-height:1.35;margin-bottom:.75rem}
+.motorcycle-credits{margin-top:1.5rem;color:var(--text-muted);font-size:.85rem}
+.motorcycle-credits summary{cursor:pointer;color:var(--accent-bright);font-weight:600}
+.motorcycle-credits ul{padding-left:1.25rem;margin-top:.75rem}
+.motorcycle-credits li{margin:.4rem 0}
+.motorcycle-credits a{color:var(--accent-bright);text-decoration:underline}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Grow, use and preserve hot peppers, with a printable color Scoville heat chart.">
+<title>Hot Peppers | My Garden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="garden-guides.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<header class="site-header"><div class="container header-inner">
+<a href="garden.html" class="logo"><span class="logo-icon">&#x1F331;</span><span class="logo-text">My<span class="accent">Garden</span></span></a>
+<nav class="main-nav" aria-label="Garden navigation"><a href="garden.html">Garden</a><a href="garden-canning.html">Canning</a><a href="garden-hot-peppers.html" aria-current="page">Hot peppers</a></nav>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#x1F319;</button>
+</div></header>
+<main>
+<section class="hero pathway-hero"><div class="container">
+<div class="hero-badge">From seed to spice</div><h1>Hot <span class="gradient-text">peppers.</span></h1>
+<p class="hero-sub">Find your favorite heat, grow a healthy crop, and enjoy the harvest safely.</p>
+<nav class="pathway-index" aria-label="Hot pepper sections"><a href="#heat">Understanding heat</a><a href="#scoville">Scoville chart</a><a href="#choose">Choose peppers</a><a href="#grow">Growing</a><a href="#troubleshooting">Troubleshooting</a><a href="#harvest">Harvest &amp; use</a><a href="#pepper-safety">Handling &amp; preserving</a><a href="#sources">Sources</a></nav>
+</div></section>
+<section class="section section-alt" id="heat"><div class="container">
+<div class="section-header"><span class="section-tag">Know your heat</span><h2>What makes a pepper hot?</h2><p>Capsaicinoids, especially capsaicin, create the burning sensation. Much of the capsaicin is concentrated in the pale inner ribs; seeds can pick it up from contact.</p></div>
+<div class="pathway-grid">
+<article class="card"><h3>Scoville heat units</h3><p>SHU is a way to express pungency. Scoville&rsquo;s original test used dilution and tasters; modern laboratories can measure capsaicinoids and express the result as SHU.</p></article>
+<article class="card"><h3>A range, not a promise</h3><p>Heat varies by cultivar, individual fruit, ripeness and growing conditions. Even peppers from the same plant can differ; color and appearance alone do not guarantee heat.</p></article>
+<article class="card"><h3>Flavor matters too</h3><p>Peppers may taste grassy, smoky, fruity or sweet as well as hot. Choose for flavor and intended use, not just the highest number.</p></article>
+</div></div></section>
+<section class="section" id="scoville"><div class="container">
+<div class="section-header"><span class="section-tag">Printable reference</span><h2>Scoville pepper chart</h2><p>Approximate values, ordered broadly from mild to extreme. Ranges overlap and individual peppers can fall outside them. Colors and labels are a visual guide, not precise boundaries.</p></div>
+<button class="btn btn-primary pepper-print" type="button" id="printPepperChart">Print color Scoville chart</button>
+<p class="guide-note pepper-screen-tip">Choose a color printer and enable background graphics in print settings if needed. The heat labels and numbers also work without color.</p>
+<div class="pepper-chart-scroll" role="region" aria-label="Scoville pepper chart; scroll horizontally if needed" tabindex="0">
+<table class="pepper-chart">
+<caption>Approximate pepper heat in Scoville heat units (SHU)</caption>
+<thead><tr><th scope="col">Pepper</th><th scope="col">Approximate SHU</th><th scope="col">Heat guide</th><th scope="col">Common use or note</th></tr></thead>
+<tbody>
+<tr class="heat-none"><th scope="row">Bell</th><td>0</td><td>Sweet</td><td>Fresh, roasted or stuffed</td></tr>
+<tr class="heat-mild"><th scope="row">Shishito / Padr&oacute;n</th><td>50&ndash;2,500</td><td>Mild</td><td>Frying types; some individual peppers can surprise</td></tr>
+<tr class="heat-mild"><th scope="row">Paprika pepper</th><td>250&ndash;1,000</td><td>Mild</td><td>Often dried and ground</td></tr>
+<tr class="heat-mild"><th scope="row">Cherry pepper</th><td>100&ndash;5,000</td><td>Mild to medium</td><td>Sweet and hot cultivars vary</td></tr>
+<tr class="heat-mild"><th scope="row">Poblano / ancho</th><td>1,000&ndash;2,000</td><td>Mild</td><td>Poblano fresh; ancho when dried</td></tr>
+<tr class="heat-mild"><th scope="row">Anaheim</th><td>1,000&ndash;5,000</td><td>Mild to medium</td><td>Roasting and stuffing</td></tr>
+<tr class="heat-medium"><th scope="row">Jalape&ntilde;o</th><td>2,500&ndash;8,000</td><td>Medium</td><td>Fresh, cooked or pickled</td></tr>
+<tr class="heat-medium"><th scope="row">Hungarian wax types</th><td>1,000&ndash;15,000</td><td>Mild to hot</td><td>Heat varies widely; distinguish hot from sweet cultivars</td></tr>
+<tr class="heat-hot"><th scope="row">Serrano</th><td>10,000&ndash;25,000</td><td>Hot</td><td>Fresh salsas and sauces</td></tr>
+<tr class="heat-hot"><th scope="row">Cayenne</th><td>30,000&ndash;50,000</td><td>Hot</td><td>Fresh, dried or ground</td></tr>
+<tr class="heat-hot"><th scope="row">Tabasco</th><td>30,000&ndash;50,000</td><td>Hot</td><td>Small fruits used in sauces</td></tr>
+<tr class="heat-extra"><th scope="row">Thai chile</th><td>50,000&ndash;100,000</td><td>Very hot</td><td>Small peppers for curries and sauces</td></tr>
+<tr class="heat-extra"><th scope="row">Habanero</th><td>100,000&ndash;350,000</td><td>Very hot</td><td>Fruity flavor; heat varies by cultivar</td></tr>
+<tr class="heat-extra"><th scope="row">Scotch bonnet</th><td>About 350,000</td><td>Very hot</td><td>Fruity flavor; NMSU sample measurement</td></tr>
+<tr class="heat-extreme"><th scope="row">Ghost / bhut jolokia</th><td>About 1,000,000</td><td>Extreme</td><td>NMSU sample measurement</td></tr>
+<tr class="heat-extreme"><th scope="row">Carolina Reaper</th><td>About 1,640,000</td><td>Extreme</td><td>Reported average; individual results vary</td></tr>
+<tr class="heat-extreme"><th scope="row">Trinidad Moruga Scorpion</th><td>About 2,000,000</td><td>Extreme</td><td>NMSU sample measurement</td></tr>
+</tbody></table>
+</div>
+<p class="guide-note">Sources: <a href="https://extension.oregonstate.edu/catalog/pub/ec-1227-grow-your-own-peppers" target="_blank" rel="noopener noreferrer">Oregon State</a>, <a href="https://ohioline.osu.edu/factsheet/hyg-1618" target="_blank" rel="noopener noreferrer">Ohio State</a>, <a href="https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/peppers-by-scoville-units/" target="_blank" rel="noopener noreferrer">University of Florida</a>, <a href="https://www.canr.msu.edu/resources/michigan-fresh-hot-peppers" target="_blank" rel="noopener noreferrer">Michigan State</a>, <a href="https://beaufort.ces.ncsu.edu/news/pepper-x-the-evolution-of-heat-in-the-worlds-hottest-peppers/" target="_blank" rel="noopener noreferrer">NC State</a> and <a href="https://cpi.nmsu.edu/chile-info/heat.html" target="_blank" rel="noopener noreferrer">New Mexico State</a>. Values are not a guarantee of any individual pepper&rsquo;s heat.</p>
+</div></section>
+<section class="section section-alt" id="choose"><div class="container">
+<div class="section-header"><span class="section-tag">Pick your plants</span><h2>Choose for your garden and kitchen</h2></div>
+<div class="pathway-grid">
+<article class="card"><h3>Mild and versatile</h3><p>Poblanos and Anaheims are favorites for roasting or stuffing; shishitos and Padr&oacute;ns are often cooked whole. Sweet bell peppers offer a no-heat comparison.</p></article>
+<article class="card"><h3>Everyday heat</h3><p>Jalape&ntilde;os, serranos and hot wax peppers work in salsas, fresh dishes and tested pickles. Cayenne, Thai chiles and Tabasco types bring more heat to sauces and dried seasonings.</p></article>
+<article class="card"><h3>Very hot and superhot</h3><p>Habaneros, ghost peppers and scorpions offer intense heat. Start with a tiny amount in cooking; use gloves and avoid exposure to children, pets and sensitive skin.</p></article>
+<article class="card"><h3>Read the label</h3><p>Check days to maturity, expected plant size and ripe color. Some superhots need a longer warm season; an early variety or a healthy nursery transplant may be more reliable in the Lehigh Valley.</p></article>
+</div></div></section>
+<section class="section" id="grow"><div class="container">
+<div class="section-header"><span class="section-tag">Lehigh Valley growing</span><h2>From seed to harvest</h2><p>Peppers are warm-season nightshades, related to tomatoes and eggplant. Local frost dates are estimates, not guarantees.</p></div>
+<ol class="guide-steps">
+<li><strong>Start indoors.</strong> Sow about 8 weeks before transplanting in a clean seed-starting mix. Keep warm and evenly moist; use bright light once seedlings emerge. Some superhots germinate slowly.</li>
+<li><strong>Harden off.</strong> Gradually introduce young plants to outdoor light and wind over a week or more. Protect from cold nights and bring them inside if frost threatens.</li>
+<li><strong>Transplant into warmth.</strong> After frost danger has passed and nights stay above 50&deg;F, typically mid- to late May or later locally, choose a sunny, well-drained site. Follow the plant label for spacing and support.</li>
+<li><strong>Water and feed.</strong> Keep moisture even, not waterlogged; water at the soil and mulch after it warms. Use compost and fertilizer according to a soil test and label. Excess nitrogen can encourage leaves instead of fruit.</li>
+<li><strong>Containers work too.</strong> A roughly 5-gallon container with drainage holes and potting mix can hold one plant. Containers dry quickly; check moisture often and never let roots sit in water.</li>
+<li><strong>Plan the season.</strong> Grow in full sun, about 6&ndash;8 hours daily; stake heavy plants. Rotate away from tomatoes, potatoes and eggplant where practical. Note planting dates, variety and harvest in your garden journal.</li>
+</ol>
+</div></section>
+<section class="section section-alt" id="troubleshooting"><div class="container">
+<div class="section-header"><span class="section-tag">Keep plants healthy</span><h2>Common growing problems</h2></div>
+<div class="pathway-grid">
+<article class="card"><h3>Flowers but no fruit</h3><p>Cold nights, heat or moisture stress can interrupt fruit set. Keep conditions steady where possible; avoid overfeeding and allow time for plants to recover.</p></article>
+<article class="card"><h3>Blossom-end rot</h3><p>Dark, sunken patches on fruit can be associated with uneven water uptake. Maintain consistent soil moisture; don&rsquo;t assume extra calcium fertilizer is needed without a soil test.</p></article>
+<article class="card"><h3>Pests and disease</h3><p>Check leaf undersides for aphids and other insects. Remove badly affected material, improve airflow and identify the problem before treatment. Follow the label for any product used on edible crops.</p></article>
+<article class="card"><h3>Sunscald or damaged roots</h3><p>Sudden intense sun can damage exposed fruit; retain a healthy leaf canopy. Avoid overwatering and poorly drained soil. Support plants rather than pulling on branches.</p></article>
+</div></div></section>
+<section class="section" id="harvest"><div class="container">
+<div class="section-header"><span class="section-tag">In the kitchen</span><h2>Harvest, store and enjoy</h2></div>
+<div class="pathway-grid">
+<article class="card"><h3>Harvest</h3><p>Check the variety for its harvest stage: many peppers are edible green and change color as they ripen. Clip fruit with a little stem rather than pulling; harvest regularly and before hard frost.</p></article>
+<article class="card"><h3>Fresh</h3><p>Refrigerate unwashed peppers and wash under running water before use. Discard moldy or spoiled fruit. Add small amounts to salsas, sauces, chili, stir-fries and marinades.</p></article>
+<article class="card"><h3>Dry or freeze</h3><p>Thin-walled hot peppers can be dried using reliable extension instructions; freeze peppers using tested preparation and storage guidance. Label with the variety and date.</p><a href="https://extension.psu.edu/preserving-those-colorful-garden-peppers" target="_blank" rel="noopener noreferrer">Pepper preservation &rarr;</a></article>
+<article class="card"><h3>Pickle or can</h3><p>Plain peppers are low-acid and need a tested pressure-canning process. Pickles and salsa need tested recipes and their exact acid ratios. Refrigerator pickles must stay refrigerated.</p><a href="garden-canning.html">Go to the canning guide &rarr;</a></article>
+</div></div></section>
+<section class="section section-alt" id="pepper-safety"><div class="container">
+<div class="section-header"><span class="section-tag">Handle with care</span><h2>Hot pepper safety</h2></div>
+<div class="guide-warning"><p>Wear food-safe gloves when cutting hot peppers, especially superhots. Do not touch your eyes, face or contact lenses. Wash hands, knives, boards and surfaces with soap and water after handling; keep peppers and residue away from children and pets.</p>
+<p>Keep cooking spaces ventilated and avoid inhaling pepper dust or fumes. If exposure causes severe symptoms or trouble breathing, seek medical help; for exposure guidance in the U.S., contact <a href="https://www.poison.org/" target="_blank" rel="noopener noreferrer">Poison Control</a> at 1-800-222-1222.</p></div>
+<p class="guide-note">Never assume peppers or garlic stored in oil at room temperature are safe. Follow tested preservation and refrigeration directions.</p>
+</div></section>
+<section class="section" id="sources"><div class="container">
+<div class="section-header"><span class="section-tag">Learn more</span><h2>Sources and practical guides</h2></div>
+<div class="pathway-grid">
+<a class="card pathway-card" href="https://extension.oregonstate.edu/catalog/pub/ec-1227-grow-your-own-peppers" target="_blank" rel="noopener noreferrer"><h3>Oregon State: grow your own peppers</h3><p>Varieties, heat estimates, growing, harvest and common problems.</p><span class="card-link">Read the guide &rarr;</span></a>
+<a class="card pathway-card" href="https://extension.umn.edu/vegetables/growing-peppers" target="_blank" rel="noopener noreferrer"><h3>Minnesota Extension: growing peppers</h3><p>Planting, site preparation and care in a northern growing season.</p><span class="card-link">Read the guide &rarr;</span></a>
+<a class="card pathway-card" href="https://pubs.nmsu.edu/_h/H237/" target="_blank" rel="noopener noreferrer"><h3>NMSU: measuring chile heat</h3><p>How genetics, growing conditions and laboratory measurements affect heat ratings.</p><span class="card-link">Read the guide &rarr;</span></a>
+<a class="card pathway-card" href="https://extension.psu.edu/lets-preserve-peppers" target="_blank" rel="noopener noreferrer"><h3>Penn State: preserve peppers</h3><p>Tested canning, pickling and freezing guidance.</p><span class="card-link">Read the guide &rarr;</span></a>
+</div></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><span class="logo-icon">&#x1F331;</span><span>My Garden</span></div><a href="garden.html">Garden</a><a href="garden-canning.html">Canning</a><a href="index.html">Home</a></div></footer>
+<script src="script.js"></script><script src="garden-peppers.js"></script>
+</body></html>

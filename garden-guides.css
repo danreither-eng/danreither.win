@@ -1,0 +1,37 @@
+.guide-warning{padding:1.2rem 1.4rem;margin-bottom:1.4rem;border:1px solid #d88c42;border-left:5px solid #d88c42;border-radius:var(--radius-sm);background:var(--surface)}
+.guide-warning p+p{margin-top:.7rem}
+.guide-warning a,.guide-note a,.pathway-grid article a{color:var(--accent-bright);text-decoration:underline}
+.guide-grid{margin-top:1rem}
+.guide-note{font-size:.85rem;color:var(--text-muted);margin:.8rem 0}
+.guide-steps{max-width:950px;padding-left:1.5rem;color:var(--text-muted)}
+.guide-steps li{padding:.35rem 0 .65rem .3rem;line-height:1.7}
+.guide-steps strong{color:var(--text)}
+.pepper-print{margin-bottom:.4rem}
+.pepper-chart-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-sm)}
+.pepper-chart{width:100%;min-width:650px;border-collapse:collapse;font-size:.88rem;background:var(--surface)}
+.pepper-chart caption{padding:.8rem 1rem;text-align:left;color:var(--text-muted)}
+.pepper-chart th,.pepper-chart td{padding:.65rem .8rem;text-align:left;border:1px solid var(--border);vertical-align:top}
+.pepper-chart thead th{background:var(--bg-alt);color:var(--text)}
+.pepper-chart tbody tr{color:#17202a}
+.pepper-chart .heat-none{background:#d6ead6}
+.pepper-chart .heat-mild{background:#e8f0b5}
+.pepper-chart .heat-medium{background:#ffe5a0}
+.pepper-chart .heat-hot{background:#ffc39b}
+.pepper-chart .heat-extra{background:#f9aaa6}
+.pepper-chart .heat-extreme{background:#d9bce3}
+@media print{
+  body.print-pepper-chart .grid-bg,body.print-pepper-chart .site-header,body.print-pepper-chart footer,body.print-pepper-chart main>section:not(#scoville),body.print-pepper-chart .pepper-print,body.print-pepper-chart .pepper-screen-tip{display:none!important}
+  body.print-pepper-chart,body.print-pepper-chart #scoville{background:#fff!important;color:#000!important}
+  body.print-pepper-chart #scoville{padding:0}
+  body.print-pepper-chart #scoville .container{max-width:none;width:100%;padding:0}
+  body.print-pepper-chart #scoville .section-header{margin-bottom:.35rem}
+  body.print-pepper-chart #scoville .section-header h2,body.print-pepper-chart #scoville .section-header p,body.print-pepper-chart .guide-note,body.print-pepper-chart .guide-note a,body.print-pepper-chart .pepper-chart caption,body.print-pepper-chart .pepper-chart th,body.print-pepper-chart .pepper-chart td{color:#000!important}
+  body.print-pepper-chart .pepper-chart-scroll{overflow:visible;border:0}
+  body.print-pepper-chart .pepper-chart{min-width:0;width:100%;font-size:8pt;table-layout:fixed;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body.print-pepper-chart .pepper-chart th,body.print-pepper-chart .pepper-chart td{border:1px solid #777;padding:.2rem .3rem}
+  body.print-pepper-chart .pepper-chart thead th{background:#e8eef3!important}
+  body.print-pepper-chart .pepper-chart th:nth-child(1){width:25%}
+  body.print-pepper-chart .pepper-chart th:nth-child(2){width:22%}
+  body.print-pepper-chart .pepper-chart th:nth-child(3){width:16%}
+  body.print-pepper-chart .pepper-chart tr{break-inside:avoid}
+}
