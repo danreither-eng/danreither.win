@@ -1,0 +1,10 @@
+.bbq-section-photo{max-width:560px;margin:0 0 1.5rem}
+.bbq-section-photo img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius-sm)}
+.bbq-section-photo a:focus-visible img{outline:3px solid var(--accent-bright);outline-offset:3px}
+.bbq-section-photo figcaption,.bbq-photo-credits{color:var(--text-muted);font-size:.85rem;margin-top:.5rem}
+.bbq-photo-credits summary{cursor:pointer;color:var(--text)}
+.bbq-photo-credits ul{padding-left:1.5rem}
+.bbq-photo-credits a{color:var(--accent-bright);text-decoration:underline}
+.pathway-card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:1rem}
+.bbq-card-caption{display:block;color:var(--text-muted);font-size:.8rem;margin:.25rem 0 .75rem}
+.pathway-card img[src="img-bbq/digital-probe-example.jpg"]{object-fit:contain}
