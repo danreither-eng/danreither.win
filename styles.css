@@ -181,6 +181,19 @@ body {
   margin-bottom: 1.5rem;
 }
 
+a.hero-badge {
+  text-decoration: none;
+}
+
+a.hero-badge:hover {
+  text-decoration: underline;
+}
+
+a.hero-badge:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 4px;
+}
+
 .hero h1 {
   font-size: clamp(2.25rem, 5vw, 3.5rem);
   font-weight: 800;
@@ -1740,6 +1753,11 @@ section[id] {
   height: 230px;
   object-fit: contain;
   border-radius: 4px;
+}
+
+.bottle-fig > a {
+  display: block;
+  width: 100%;
 }
 
 .bottle-fig figcaption {

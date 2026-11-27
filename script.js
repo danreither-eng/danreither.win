@@ -199,6 +199,12 @@
       image.alt = `${pick.title} logo`;
       image.loading = 'lazy';
       image.decoding = 'async';
+      const imageLink = document.createElement('a');
+      imageLink.href = pick.links[0][1];
+      imageLink.target = '_blank';
+      imageLink.rel = 'noopener noreferrer';
+      imageLink.setAttribute('aria-label', pick.links[0][0]);
+      imageLink.appendChild(image);
       const format = document.createElement('p');
       format.className = 'weekly-pick-format';
       format.textContent = pick.format;
@@ -216,7 +222,7 @@
         link.textContent = label;
         links.appendChild(link);
       });
-      card.append(image, format, title, description, links);
+      card.append(imageLink, format, title, description, links);
       weeklyPicksContainer.appendChild(card);
     }
   }

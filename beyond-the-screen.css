@@ -1,3 +1,5 @@
+.card-photo-link{display:block}
+.card-photo-link:focus-visible .personal-card-photo{outline:3px solid var(--accent-bright);outline-offset:3px}
 .personal-card-photo{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:1rem;background:var(--bg-alt)}
 .personal-photo-credits{margin-top:1.5rem;color:var(--text-muted);font-size:.85rem}
 .personal-photo-credits summary{cursor:pointer;color:var(--text)}

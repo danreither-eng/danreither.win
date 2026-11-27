@@ -28,6 +28,7 @@ No build step is required. Keep `_headers` in the static asset root and `.well-k
 
 ## Customize
 
+- When a card has a related destination, link its picture to that destination as well, while preserving any separate actions and accessible labels.
 - `students-start-here.html` offers a beginner pathway, linked from the homepage's Students Start Here box and the Career Launchpad. Keep introductory links and free-access claims current.
 - `reserve-shelf-image-credits.html` records third-party image attribution and licenses; update it whenever a credited Reserve Shelf image changes.
 - Explore `ai-resources.html`, `security-essentials.html`, and `homelab.html` from the homepage's More field guides section. `beyond-the-screen.html` brings together the garden, Reserve Shelf, motorcycles, coffee, everyday carry, BBQ, and heritage goods guides.
