@@ -19,6 +19,16 @@
 .pepper-chart .heat-hot{background:#ffc39b}
 .pepper-chart .heat-extra{background:#f9aaa6}
 .pepper-chart .heat-extreme{background:#d9bce3}
+.pepper-photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.pepper-photo{margin:0;overflow:hidden;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface)}
+.pepper-photo img{display:block;width:100%;height:160px;object-fit:cover}
+.pepper-photo figcaption{padding:.75rem;font-weight:600;color:var(--text)}
+.pepper-photo figcaption span{display:block;font-size:.8rem;font-weight:400;color:var(--text-muted)}
+.pepper-photo-credits{margin-top:1.5rem;color:var(--text-muted);font-size:.85rem}
+.pepper-photo-credits summary{cursor:pointer;color:var(--text)}
+.pepper-photo-credits ul{padding-left:1.5rem}
+.pepper-photo-credits li{margin:.35rem 0}
+.pepper-photo-credits a{color:var(--accent-bright);text-decoration:underline}
 @media print{
   body.print-pepper-chart .grid-bg,body.print-pepper-chart .site-header,body.print-pepper-chart footer,body.print-pepper-chart main>section:not(#scoville),body.print-pepper-chart .pepper-print,body.print-pepper-chart .pepper-screen-tip{display:none!important}
   body.print-pepper-chart,body.print-pepper-chart #scoville{background:#fff!important;color:#000!important}
