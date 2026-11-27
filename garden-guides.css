@@ -35,6 +35,9 @@
 .pepper-chart .heat-extra{background:#f9aaa6}
 .pepper-chart .heat-extreme{background:#d9bce3}
 .pepper-photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.pepper-card-photo-link{display:block}
+.pepper-card-photo-link:focus-visible{outline:3px solid var(--accent-bright);outline-offset:3px}
+.pepper-card-photo{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:1rem;background:var(--bg-alt)}
 .pepper-photo{position:relative;margin:0;overflow:hidden;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface)}
 .pepper-photo:focus-within{outline:2px solid var(--accent-bright);outline-offset:2px}
 .pepper-photo img{display:block;width:100%;height:160px;object-fit:cover}
