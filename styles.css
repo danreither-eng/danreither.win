@@ -1343,6 +1343,32 @@ section[id] {
   margin-bottom: 0.25rem;
 }
 
+.site-footer a,
+.site-footer a:visited {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.25rem 0.5rem;
+  color: var(--accent-bright);
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+[data-theme="light"] .site-footer a,
+[data-theme="light"] .site-footer a:visited {
+  color: #1d4ed8;
+}
+
+.site-footer a:hover,
+[data-theme="light"] .site-footer a:hover {
+  color: var(--text);
+}
+
+.site-footer a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 .footer-meta {
   font-size: 0.75rem !important;
   color: var(--text-dim) !important;
