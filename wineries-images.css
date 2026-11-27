@@ -1,0 +1,47 @@
+.winery-photo {
+  margin: 0 0 1rem;
+}
+
+.winery-photo a {
+  display: block;
+}
+
+.winery-photo a:focus-visible {
+  outline: 3px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+.winery-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.winery-photo figcaption {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin-top: 0.4rem;
+}
+
+.winery-credits {
+  margin-top: 2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.winery-credits summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.winery-credits ul {
+  padding-left: 1.5rem;
+}
+
+.winery-credits li {
+  margin: 0.5rem 0;
+  overflow-wrap: anywhere;
+}

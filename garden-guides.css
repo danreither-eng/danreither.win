@@ -6,6 +6,12 @@
 .guide-steps{max-width:950px;padding-left:1.5rem;color:var(--text-muted)}
 .guide-steps li{padding:.35rem 0 .65rem .3rem;line-height:1.7}
 .guide-steps strong{color:var(--text)}
+.canning-photo{max-width:820px;margin:1.25rem 0 1.5rem;overflow:hidden;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface)}
+.canning-photo-link{display:block}
+.canning-photo-link:focus-visible{outline:3px solid var(--accent-bright);outline-offset:-3px}
+.canning-photo img{display:block;width:100%;height:clamp(13rem,34vw,23rem);object-fit:cover;background:var(--bg-alt)}
+.canning-photo figcaption{padding:.75rem 1rem;color:var(--text-muted);font-size:.82rem;line-height:1.55}
+.canning-photo figcaption a{color:var(--accent-bright);text-decoration:underline}
 .pepper-print{margin-bottom:.4rem}
 .pepper-chart-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-sm)}
 .pepper-chart{width:100%;min-width:650px;border-collapse:collapse;font-size:.88rem;background:var(--surface)}
