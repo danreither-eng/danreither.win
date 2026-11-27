@@ -24,6 +24,9 @@
 .pepper-photo img{display:block;width:100%;height:160px;object-fit:cover}
 .pepper-photo figcaption{padding:.75rem;font-weight:600;color:var(--text)}
 .pepper-photo figcaption span{display:block;font-size:.8rem;font-weight:400;color:var(--text-muted)}
+.pepper-photo figcaption a{display:inline-block;margin-top:.4rem;font-size:.8rem;color:var(--accent-bright);text-decoration:underline}
+.pepper-photo-missing{height:160px;display:flex;align-items:center;justify-content:center;padding:1rem;text-align:center;background:var(--bg-alt);color:var(--text-muted);font-size:.85rem}
+.pepper-collection-heading{margin:2rem 0 .5rem}
 .pepper-photo-credits{margin-top:1.5rem;color:var(--text-muted);font-size:.85rem}
 .pepper-photo-credits summary{cursor:pointer;color:var(--text)}
 .pepper-photo-credits ul{padding-left:1.5rem}
