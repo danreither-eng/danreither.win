@@ -6,3 +6,5 @@
 .personal-photo-credits ul{padding-left:1.5rem}
 .personal-photo-credits li{margin:.35rem 0}
 .personal-photo-credits a{color:var(--accent-bright);text-decoration:underline}
+#western-road-trip p a{color:var(--accent-bright)}
+[data-theme="light"] #western-road-trip p a{color:#1d4ed8}
