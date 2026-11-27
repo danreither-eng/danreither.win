@@ -10,6 +10,7 @@
 .canning-photo-link{display:block}
 .canning-photo-link:focus-visible{outline:3px solid var(--accent-bright);outline-offset:-3px}
 .canning-photo img{display:block;width:100%;height:clamp(13rem,34vw,23rem);object-fit:cover;background:var(--bg-alt)}
+#methods .canning-photo img{height:min(75vh,34rem);object-fit:contain}
 .canning-photo figcaption{padding:.75rem 1rem;color:var(--text-muted);font-size:.82rem;line-height:1.55}
 .canning-photo figcaption a{color:var(--accent-bright);text-decoration:underline}
 .pepper-print{margin-bottom:.4rem}
