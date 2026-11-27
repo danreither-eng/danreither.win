@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="A personal garden growing guide: what to plant, when to plant and harvest, feeding, spacing, and good neighbors."><title>My Garden | Personal Growing Guide</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F331;</text></svg>">
-<link rel="stylesheet" href="garden.css?v=7">
+<link rel="stylesheet" href="garden.css?v=8">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -67,8 +67,9 @@
 <section class="section section-alt" id="planting-chart">
 <div class="container">
 <div class="section-header"><span class="section-tag">Year at a glance</span><h2>Planting and harvest timeline</h2>
-<p>Approximate monthly windows for the Lehigh Valley. Timing varies by weather, variety, and whether you start seeds indoors or transplant outdoors; check each crop's detailed notes. Scroll the chart sideways on smaller screens.</p></div>
+<p>Approximate monthly windows for the Lehigh Valley. Timing varies by weather, variety, and whether you start seeds indoors or transplant outdoors; check each crop's detailed notes. <span class="garden-chart-screen-tip">Scroll the chart sideways on smaller screens.</span></p></div>
 <button class="btn btn-secondary garden-chart-print" type="button" id="printChartBtn">Print planting and harvest chart</button>
+<p class="garden-note garden-chart-screen-tip">For color printing, choose a color printer and enable background graphics in your print settings if needed. The letters also work in black and white.</p>
 <p class="garden-chart-legend"><span><b class="garden-chart-plant">P</b> Plant</span><span><b class="garden-chart-harvest">H</b> Harvest</span><span><b class="garden-chart-both">P/H</b> Both</span><span>&mdash; No window recorded</span></p>
 <div class="garden-chart-scroll" role="region" aria-label="Planting and harvest timeline, scroll horizontally" tabindex="0">
 <table class="garden-chart" id="gardenChart"><caption>Planting and harvest months by crop</caption><thead><tr><th scope="col">Crop</th><th scope="col">Jan</th><th scope="col">Feb</th><th scope="col">Mar</th><th scope="col">Apr</th><th scope="col">May</th><th scope="col">Jun</th><th scope="col">Jul</th><th scope="col">Aug</th><th scope="col">Sep</th><th scope="col">Oct</th><th scope="col">Nov</th><th scope="col">Dec</th></tr></thead><tbody id="gardenChartBody"></tbody></table>

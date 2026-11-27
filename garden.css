@@ -76,19 +76,26 @@
 .garden-chart-print{margin-bottom:1rem}
 @media print{.garden-tools,.garden-tabs,.site-header,.garden-form-section,.theme-toggle,.garden-chart-print{display:none!important}}
 @media print{
-  body.print-chart .grid-bg,body.print-chart .site-header,body.print-chart footer,body.print-chart main>section:not(#planting-chart),body.print-chart .garden-chart-print{display:none!important}
+  body.print-chart .grid-bg,body.print-chart .site-header,body.print-chart footer,body.print-chart main>section:not(#planting-chart),body.print-chart .garden-chart-print,body.print-chart .garden-chart-screen-tip{display:none!important}
   body.print-chart,body.print-chart #planting-chart{background:#fff!important;color:#000!important}
   body.print-chart #planting-chart{padding:0}
   body.print-chart #planting-chart .container{max-width:none;width:100%;padding:0}
   body.print-chart #planting-chart .section-header{margin-bottom:.5rem}
   body.print-chart #planting-chart .section-header h2,body.print-chart #planting-chart .section-header p,body.print-chart .garden-note,body.print-chart .garden-chart-legend,body.print-chart .garden-chart caption,body.print-chart .garden-chart th,body.print-chart .garden-chart td{color:#000!important}
   body.print-chart .garden-chart-scroll{overflow:visible;border:0}
+  body.print-chart .garden-chart,body.print-chart .garden-chart-legend{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   body.print-chart .garden-chart{min-width:0;width:100%;table-layout:fixed;font-size:8pt;background:#fff}
   body.print-chart .garden-chart th,body.print-chart .garden-chart td{border:1px solid #777;padding:.2rem .05rem;background:#fff!important}
-  body.print-chart .garden-chart-legend b{background:#fff!important;color:#000!important}
+  body.print-chart .garden-chart-legend b{color:#000!important}
+  body.print-chart .garden-chart td.garden-chart-plant,body.print-chart .garden-chart-legend b.garden-chart-plant{background:#bfe4c6!important}
+  body.print-chart .garden-chart td.garden-chart-harvest,body.print-chart .garden-chart-legend b.garden-chart-harvest{background:#ffdfa3!important}
+  body.print-chart .garden-chart td.garden-chart-both,body.print-chart .garden-chart-legend b.garden-chart-both{background:linear-gradient(135deg,#bfe4c6 50%,#ffdfa3 50%)!important}
+  body.print-chart .garden-chart td.garden-chart-plant,body.print-chart .garden-chart td.garden-chart-harvest,body.print-chart .garden-chart td.garden-chart-both{font-weight:700}
+  body.print-chart .garden-chart td:not([class]){color:#777!important}
   body.print-chart .garden-chart tbody th[scope=row]{min-width:0;padding-left:.2rem;overflow-wrap:anywhere}
   body.print-chart .garden-chart th:first-child{width:24%}
-  body.print-chart .garden-chart thead th{font-size:7pt}
+  body.print-chart .garden-chart thead th{font-size:7pt;background:#e8eef3!important}
+  body.print-chart .garden-chart .garden-chart-group th{background:#dce8e1!important;padding:.3rem .2rem}
   body.print-chart .garden-chart-group{break-after:avoid}
   body.print-chart .garden-chart tr{break-inside:avoid}
 }

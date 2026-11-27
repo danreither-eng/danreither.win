@@ -1,4 +1,3 @@
 .bike-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
 .bike-gallery figure{margin:0;overflow:hidden;padding:0}
 .bike-gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--bg-alt)}
-.bike-gallery figcaption{padding:.75rem 1rem;color:var(--text-muted);font-size:.85rem}
