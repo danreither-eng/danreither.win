@@ -20,12 +20,14 @@
 .pepper-chart .heat-extra{background:#f9aaa6}
 .pepper-chart .heat-extreme{background:#d9bce3}
 .pepper-photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
-.pepper-photo{margin:0;overflow:hidden;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface)}
+.pepper-photo{position:relative;margin:0;overflow:hidden;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface)}
+.pepper-photo:focus-within{outline:2px solid var(--accent-bright);outline-offset:2px}
 .pepper-photo img{display:block;width:100%;height:160px;object-fit:cover}
 .pepper-photo figcaption{padding:.75rem;font-weight:600;color:var(--text)}
 .pepper-photo figcaption span{display:block;font-size:.8rem;font-weight:400;color:var(--text-muted)}
 .pepper-photo figcaption a{display:inline-block;margin-top:.4rem;font-size:.8rem;color:var(--accent-bright);text-decoration:underline}
-.pepper-photo-missing{height:160px;display:flex;align-items:center;justify-content:center;padding:1rem;text-align:center;background:var(--bg-alt);color:var(--text-muted);font-size:.85rem}
+.pepper-photo figcaption a:first-of-type::after{content:"";position:absolute;inset:0}
+.pepper-photo figcaption a+a{position:relative;z-index:1;margin-left:.4rem}
 .pepper-collection-heading{margin:2rem 0 .5rem}
 .pepper-photo-credits{margin-top:1.5rem;color:var(--text-muted);font-size:.85rem}
 .pepper-photo-credits summary{cursor:pointer;color:var(--text)}
@@ -33,15 +35,15 @@
 .pepper-photo-credits li{margin:.35rem 0}
 .pepper-photo-credits a{color:var(--accent-bright);text-decoration:underline}
 @media print{
-  body.print-pepper-chart .grid-bg,body.print-pepper-chart .site-header,body.print-pepper-chart footer,body.print-pepper-chart main>section:not(#scoville),body.print-pepper-chart .pepper-print,body.print-pepper-chart .pepper-screen-tip{display:none!important}
+  body.print-pepper-chart .grid-bg,body.print-pepper-chart .site-header,body.print-pepper-chart footer,body.print-pepper-chart main>section:not(#scoville),body.print-pepper-chart .pepper-print,body.print-pepper-chart .pepper-screen-tip,body.print-pepper-chart #scoville .guide-note{display:none!important}
   body.print-pepper-chart,body.print-pepper-chart #scoville{background:#fff!important;color:#000!important}
   body.print-pepper-chart #scoville{padding:0}
   body.print-pepper-chart #scoville .container{max-width:none;width:100%;padding:0}
   body.print-pepper-chart #scoville .section-header{margin-bottom:.35rem}
   body.print-pepper-chart #scoville .section-header h2,body.print-pepper-chart #scoville .section-header p,body.print-pepper-chart .guide-note,body.print-pepper-chart .guide-note a,body.print-pepper-chart .pepper-chart caption,body.print-pepper-chart .pepper-chart th,body.print-pepper-chart .pepper-chart td{color:#000!important}
   body.print-pepper-chart .pepper-chart-scroll{overflow:visible;border:0}
-  body.print-pepper-chart .pepper-chart{min-width:0;width:100%;font-size:8pt;table-layout:fixed;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  body.print-pepper-chart .pepper-chart th,body.print-pepper-chart .pepper-chart td{border:1px solid #777;padding:.2rem .3rem}
+  body.print-pepper-chart .pepper-chart{min-width:0;width:100%;font-size:7pt;line-height:1.15;table-layout:fixed;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body.print-pepper-chart .pepper-chart th,body.print-pepper-chart .pepper-chart td{border:1px solid #777;padding:.12rem .25rem}
   body.print-pepper-chart .pepper-chart thead th{background:#e8eef3!important}
   body.print-pepper-chart .pepper-chart th:nth-child(1){width:25%}
   body.print-pepper-chart .pepper-chart th:nth-child(2){width:22%}
